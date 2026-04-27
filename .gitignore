@@ -1,16 +1,11 @@
-# Compiled class file
 *.class
 
-# Log file
 *.log
 
-# BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -19,9 +14,10 @@
 *.tar.gz
 *.rar
 
-# Maven target folder
 target/
 
-# virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+src/main/resources/
+db.cfg

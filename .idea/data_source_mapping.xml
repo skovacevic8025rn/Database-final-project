@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/src/main/resources/kreiranje_tabela.sql" value="aeed5079-1330-43ef-97c6-b03a1069f617" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/aeed5079-1330-43ef-97c6-b03a1069f617/console.sql" value="aeed5079-1330-43ef-97c6-b03a1069f617" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/psihologija_baza.sql" value="aeed5079-1330-43ef-97c6-b03a1069f617" />
   </component>
 </project>

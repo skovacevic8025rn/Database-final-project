@@ -13,10 +13,6 @@ public class UserRepository {
         return DatabaseConnection.getInstance().getConnection();
     }
 
-    /**
-     * Pronalazi korisnika po korisničkom imenu i lozinci.
-     * Koristi se za login.
-     */
     public Optional<User> findByKorisnickoImeILozinka(String korisnickoIme, String lozinka) throws SQLException {
         String sql = "SELECT * FROM users WHERE korisnicko_ime = ? AND lozinka = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -30,9 +26,6 @@ public class UserRepository {
         return Optional.empty();
     }
 
-    /**
-     * Proverava da li korisničko ime već postoji u bazi.
-     */
     public boolean existsByKorisnickoIme(String korisnickoIme) throws SQLException {
         String sql = "SELECT COUNT(*) FROM users WHERE korisnicko_ime = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -45,9 +38,6 @@ public class UserRepository {
         return false;
     }
 
-    /**
-     * Proverava da li email već postoji u bazi.
-     */
     public boolean existsByEmail(String email) throws SQLException {
         String sql = "SELECT COUNT(*) FROM users WHERE email = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -60,10 +50,6 @@ public class UserRepository {
         return false;
     }
 
-    /**
-     * Upisuje novog korisnika u bazu.
-     * Koristi se za registraciju.
-     */
     public boolean save(User user) throws SQLException {
         String sql = "INSERT INTO users (ime, prezime, email, korisnicko_ime, lozinka, uloga) VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -77,9 +63,6 @@ public class UserRepository {
         }
     }
 
-    /**
-     * Mapira red iz ResultSet-a u User objekat.
-     */
     private User mapRow(ResultSet rs) throws SQLException {
         User u = new User();
         u.setId(rs.getInt("id"));
