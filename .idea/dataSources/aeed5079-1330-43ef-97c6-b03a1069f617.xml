@@ -1018,7 +1018,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="292" parent="1" name="psihologija_db">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-05-07.01:23:13</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-05-07.02:06:41</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="sys">
@@ -1169,2370 +1169,1987 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="324" parent="292" name="alat">
+    <routine id="324" parent="292" name="broj_eksperimenata_istrazivaca">
+      <Definer>root@localhost</Definer>
+      <DetailsLevel>3</DetailsLevel>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>169</SourceTextLength>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <routine id="325" parent="292" name="dodaj_sesiju_za_izvodjenje">
+      <Definer>root@localhost</Definer>
+      <DetailsLevel>3</DetailsLevel>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>474</SourceTextLength>
+    </routine>
+    <routine id="326" parent="292" name="test_broj_eksperimenata_istrazivaca">
+      <Definer>root@localhost</Definer>
+      <DetailsLevel>3</DetailsLevel>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>746</SourceTextLength>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <table id="327" parent="292" name="alat">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="325" parent="292" name="asistent">
+    <table id="328" parent="292" name="asistent">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="326" parent="292" name="eksperiment">
+    <table id="329" parent="292" name="eksperiment">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="327" parent="292" name="eksperiment_alat">
+    <table id="330" parent="292" name="eksperiment_alat">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="328" parent="292" name="eksperiment_istrazivac">
+    <table id="331" parent="292" name="eksperiment_istrazivac">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="329" parent="292" name="eksperiment_resurs">
+    <table id="332" parent="292" name="eksperiment_resurs">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="330" parent="292" name="granapsihologije">
+    <table id="333" parent="292" name="granapsihologije">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="331" parent="292" name="ispitanik">
+    <table id="334" parent="292" name="ispitanik">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="332" parent="292" name="istrazivac">
+    <table id="335" parent="292" name="istrazivac">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="333" parent="292" name="izvodjenje">
+    <table id="336" parent="292" name="izvodjenje">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="334" parent="292" name="korisnik">
+    <table id="337" parent="292" name="korisnik">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="335" parent="292" name="laboratorija">
+    <table id="338" parent="292" name="laboratorija">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="336" parent="292" name="laboratorija_resurs">
+    <table id="339" parent="292" name="laboratorija_resurs">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="337" parent="292" name="psiholog">
+    <table id="340" parent="292" name="psiholog">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="338" parent="292" name="psiholoskitest">
+    <table id="341" parent="292" name="psiholoskitest">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="339" parent="292" name="psihoterapeut">
+    <table id="342" parent="292" name="psihoterapeut">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="340" parent="292" name="resurs">
+    <table id="343" parent="292" name="resurs">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="341" parent="292" name="rezultattesta">
+    <table id="344" parent="292" name="rezultattesta">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="342" parent="292" name="sesija">
+    <table id="345" parent="292" name="sesija">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="343" parent="292" name="sesija_ispitanik">
+    <table id="346" parent="292" name="sesija_ispitanik">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="344" parent="292" name="sesija_test">
+    <table id="347" parent="292" name="sesija_test">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="345" parent="292" name="teorija">
+    <table id="348" parent="292" name="teorija">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="346" parent="292" name="terapija">
+    <table id="349" parent="292" name="terapija">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="347" parent="292" name="tipalata">
+    <table id="350" parent="292" name="tipalata">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <check id="348" parent="298" name="chk_status_ispravnosti">
+    <view id="351" parent="292" name="pregled_laboratorija_sa_istrazivacima">
+      <Definer>root@localhost</Definer>
+      <DetailsLevel>3</DetailsLevel>
+      <SourceTextLength>575</SourceTextLength>
+    </view>
+    <check id="352" parent="298" name="chk_status_ispravnosti">
       <Predicate>`status_ispravnosti` in (_utf8mb4\&apos;Ispravan\&apos;,_utf8mb4\&apos;Neispravan\&apos;,_utf8mb4\&apos;Na servisiranju\&apos;)</Predicate>
     </check>
-    <column id="349" parent="298" name="alat_id">
+    <column id="353" parent="298" name="alat_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="350" parent="298" name="laboratorija_id">
+    <column id="354" parent="298" name="laboratorija_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="351" parent="298" name="inventarni_broj">
+    <column id="355" parent="298" name="inventarni_broj">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="352" parent="298" name="tip_alata">
+    <column id="356" parent="298" name="tip_alata">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="353" parent="298" name="naziv">
+    <column id="357" parent="298" name="naziv">
       <Position>5</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="354" parent="298" name="datum_nabavke">
+    <column id="358" parent="298" name="datum_nabavke">
       <Position>6</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="355" parent="298" name="datum_kalibracije">
+    <column id="359" parent="298" name="datum_kalibracije">
       <Position>7</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="356" parent="298" name="status_ispravnosti">
+    <column id="360" parent="298" name="status_ispravnosti">
       <Position>8</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <foreign-key id="357" parent="298" name="fk_alat_lab">
+    <foreign-key id="361" parent="298" name="fk_alat_lab">
       <ColNames>laboratorija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <index id="358" parent="298" name="PRIMARY">
+    <index id="362" parent="298" name="PRIMARY">
       <ColNames>alat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="359" parent="298" name="uq_inventarni_broj">
+    <index id="363" parent="298" name="uq_inventarni_broj">
       <ColNames>inventarni_broj</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="360" parent="298" name="fk_alat_lab">
+    <index id="364" parent="298" name="fk_alat_lab">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="361" parent="298" name="PRIMARY">
+    <key id="365" parent="298" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="362" parent="298" name="uq_inventarni_broj">
+    <key id="366" parent="298" name="uq_inventarni_broj">
       <UnderlyingIndexName>uq_inventarni_broj</UnderlyingIndexName>
     </key>
-    <check id="363" parent="299" name="chk_uloga">
+    <check id="367" parent="299" name="chk_uloga">
       <Predicate>`uloga` in (_utf8mb4\&apos;Glavni ispitivac\&apos;,_utf8mb4\&apos;Posmatrac\&apos;,_utf8mb4\&apos;Tehnicar\&apos;,_utf8mb4\&apos;Koordinator ucesnika\&apos;)</Predicate>
     </check>
-    <column id="364" parent="299" name="clan_tima_id">
+    <column id="368" parent="299" name="clan_tima_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="365" parent="299" name="izvodjenje_id">
+    <column id="369" parent="299" name="izvodjenje_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="366" parent="299" name="istrazivac_id">
+    <column id="370" parent="299" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="367" parent="299" name="uloga">
+    <column id="371" parent="299" name="uloga">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="368" parent="299" name="opis_uloge">
+    <column id="372" parent="299" name="opis_uloge">
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <foreign-key id="369" parent="299" name="fk_ct_izvodjenje">
+    <foreign-key id="373" parent="299" name="fk_ct_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>izvodjenje_id</RefColNames>
       <RefTableName>izvodjenje</RefTableName>
     </foreign-key>
-    <foreign-key id="370" parent="299" name="fk_ct_istrazivac">
+    <foreign-key id="374" parent="299" name="fk_ct_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="371" parent="299" name="PRIMARY">
+    <index id="375" parent="299" name="PRIMARY">
       <ColNames>clan_tima_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="372" parent="299" name="uq_clan_uloga">
+    <index id="376" parent="299" name="uq_clan_uloga">
       <ColNames>izvodjenje_id
 istrazivac_id
 uloga</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="373" parent="299" name="fk_ct_istrazivac">
+    <index id="377" parent="299" name="fk_ct_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="374" parent="299" name="PRIMARY">
+    <key id="378" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="375" parent="299" name="uq_clan_uloga">
+    <key id="379" parent="299" name="uq_clan_uloga">
       <UnderlyingIndexName>uq_clan_uloga</UnderlyingIndexName>
     </key>
-    <column id="376" parent="300" name="eksperiment_id">
+    <column id="380" parent="300" name="eksperiment_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="377" parent="300" name="sifra">
+    <column id="381" parent="300" name="sifra">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="378" parent="300" name="naziv">
+    <column id="382" parent="300" name="naziv">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(300)|0s</StoredType>
     </column>
-    <column id="379" parent="300" name="oblast">
+    <column id="383" parent="300" name="oblast">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="380" parent="300" name="teorijski_okvir">
+    <column id="384" parent="300" name="teorijski_okvir">
       <Position>5</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="381" parent="300" name="hipoteza">
+    <column id="385" parent="300" name="hipoteza">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="382" parent="300" name="ciljevi_istrazivanja">
+    <column id="386" parent="300" name="ciljevi_istrazivanja">
       <Position>7</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="383" parent="300" name="irb_broj_odobrenja">
+    <column id="387" parent="300" name="irb_broj_odobrenja">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <index id="384" parent="300" name="PRIMARY">
+    <index id="388" parent="300" name="PRIMARY">
       <ColNames>eksperiment_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="385" parent="300" name="uq_sifra">
+    <index id="389" parent="300" name="uq_sifra">
       <ColNames>sifra</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="386" parent="300" name="uq_irb">
+    <index id="390" parent="300" name="uq_irb">
       <ColNames>irb_broj_odobrenja</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="387" parent="300" name="PRIMARY">
+    <key id="391" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="388" parent="300" name="uq_sifra">
+    <key id="392" parent="300" name="uq_sifra">
       <UnderlyingIndexName>uq_sifra</UnderlyingIndexName>
     </key>
-    <key id="389" parent="300" name="uq_irb">
+    <key id="393" parent="300" name="uq_irb">
       <UnderlyingIndexName>uq_irb</UnderlyingIndexName>
     </key>
-    <column id="390" parent="301" name="eksperiment_id">
+    <column id="394" parent="301" name="eksperiment_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="391" parent="301" name="istrazivac_id">
+    <column id="395" parent="301" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="392" parent="301" name="fk_ed_eksperiment">
+    <foreign-key id="396" parent="301" name="fk_ed_eksperiment">
       <ColNames>eksperiment_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="393" parent="301" name="fk_ed_istrazivac">
+    <foreign-key id="397" parent="301" name="fk_ed_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="394" parent="301" name="PRIMARY">
+    <index id="398" parent="301" name="PRIMARY">
       <ColNames>eksperiment_id
 istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="395" parent="301" name="fk_ed_istrazivac">
+    <index id="399" parent="301" name="fk_ed_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="396" parent="301" name="PRIMARY">
+    <key id="400" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <trigger id="397" parent="301" name="trg_provera_kvalifikacije_dizajnera">
+    <trigger id="401" parent="301" name="trg_provera_kvalifikacije_dizajnera">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>477</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <column id="398" parent="302" name="eksperiment_id">
+    <column id="402" parent="302" name="eksperiment_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="399" parent="302" name="resurs_id">
+    <column id="403" parent="302" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="400" parent="302" name="fk_er_eksperiment">
+    <foreign-key id="404" parent="302" name="fk_er_eksperiment">
       <ColNames>eksperiment_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="401" parent="302" name="fk_er_resurs">
+    <foreign-key id="405" parent="302" name="fk_er_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="402" parent="302" name="PRIMARY">
+    <index id="406" parent="302" name="PRIMARY">
       <ColNames>eksperiment_id
 resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="403" parent="302" name="fk_er_resurs">
+    <index id="407" parent="302" name="fk_er_resurs">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="404" parent="302" name="PRIMARY">
+    <key id="408" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="405" parent="303" name="feedback_id">
+    <column id="409" parent="303" name="feedback_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="406" parent="303" name="rezultat_id">
+    <column id="410" parent="303" name="rezultat_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="407" parent="303" name="ocenjivac_id">
+    <column id="411" parent="303" name="ocenjivac_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="408" parent="303" name="oblasti_za_unapredjenje">
+    <column id="412" parent="303" name="oblasti_za_unapredjenje">
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="409" parent="303" name="procena_spremnosti">
+    <column id="413" parent="303" name="procena_spremnosti">
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="410" parent="303" name="predlog_daljeg_rada">
+    <column id="414" parent="303" name="predlog_daljeg_rada">
       <Position>6</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="411" parent="303" name="vreme_kreiranja">
+    <column id="415" parent="303" name="vreme_kreiranja">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="412" parent="303" name="fk_fb_rezultat">
+    <foreign-key id="416" parent="303" name="fk_fb_rezultat">
       <ColNames>rezultat_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>rezultat_id</RefColNames>
       <RefTableName>rezultattesta</RefTableName>
     </foreign-key>
-    <foreign-key id="413" parent="303" name="fk_fb_ocenjivac">
+    <foreign-key id="417" parent="303" name="fk_fb_ocenjivac">
       <ColNames>ocenjivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="414" parent="303" name="PRIMARY">
+    <index id="418" parent="303" name="PRIMARY">
       <ColNames>feedback_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="415" parent="303" name="fk_fb_rezultat">
+    <index id="419" parent="303" name="fk_fb_rezultat">
       <ColNames>rezultat_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="416" parent="303" name="fk_fb_ocenjivac">
+    <index id="420" parent="303" name="fk_fb_ocenjivac">
       <ColNames>ocenjivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="417" parent="303" name="PRIMARY">
+    <key id="421" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="418" parent="304" name="istrazivac_id">
+    <column id="422" parent="304" name="istrazivac_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="419" parent="304" name="ime">
+    <column id="423" parent="304" name="ime">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="420" parent="304" name="prezime">
+    <column id="424" parent="304" name="prezime">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="421" parent="304" name="titula">
+    <column id="425" parent="304" name="titula">
       <Position>4</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="422" parent="304" name="orcid">
+    <column id="426" parent="304" name="orcid">
       <Position>5</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="423" parent="304" name="oblast_specijalizacije">
+    <column id="427" parent="304" name="oblast_specijalizacije">
       <Position>6</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="424" parent="304" name="email">
+    <column id="428" parent="304" name="email">
       <Position>7</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="425" parent="304" name="telefon">
+    <column id="429" parent="304" name="telefon">
       <Position>8</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="426" parent="304" name="aktivan">
+    <column id="430" parent="304" name="aktivan">
       <DefaultExpression>1</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>tinyint(1)|0s</StoredType>
     </column>
-    <column id="427" parent="304" name="supervizor_id">
+    <column id="431" parent="304" name="supervizor_id">
       <Position>10</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="428" parent="304" name="fk_supervizor">
+    <foreign-key id="432" parent="304" name="fk_supervizor">
       <ColNames>supervizor_id</ColNames>
       <OnDelete>set-null</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="429" parent="304" name="PRIMARY">
+    <index id="433" parent="304" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="430" parent="304" name="uq_orcid">
+    <index id="434" parent="304" name="uq_orcid">
       <ColNames>orcid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="431" parent="304" name="fk_supervizor">
+    <index id="435" parent="304" name="fk_supervizor">
       <ColNames>supervizor_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="432" parent="304" name="PRIMARY">
+    <key id="436" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="433" parent="304" name="uq_orcid">
+    <key id="437" parent="304" name="uq_orcid">
       <UnderlyingIndexName>uq_orcid</UnderlyingIndexName>
     </key>
-    <check id="434" parent="305" name="chk_razlog_otkazivanja">
+    <check id="438" parent="305" name="chk_razlog_otkazivanja">
       <Predicate>(`status` &lt;&gt; _utf8mb4\&apos;Otkazano\&apos;) or (`razlog_otkazivanja` is not null)</Predicate>
     </check>
-    <check id="435" parent="305" name="chk_status_izvodjenja">
+    <check id="439" parent="305" name="chk_status_izvodjenja">
       <Predicate>`status` in (_utf8mb4\&apos;Planirano\&apos;,_utf8mb4\&apos;Zapoceto\&apos;,_utf8mb4\&apos;Otkazano\&apos;,_utf8mb4\&apos;ZavrsenoUspesno\&apos;,_utf8mb4\&apos;ZavrsenoNeuspesno\&apos;)</Predicate>
     </check>
-    <column id="436" parent="305" name="izvodjenje_id">
+    <column id="440" parent="305" name="izvodjenje_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="437" parent="305" name="eksperiment_id">
+    <column id="441" parent="305" name="eksperiment_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="438" parent="305" name="laboratorija_id">
+    <column id="442" parent="305" name="laboratorija_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="439" parent="305" name="redni_broj">
+    <column id="443" parent="305" name="redni_broj">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="440" parent="305" name="datum_pokretanja">
+    <column id="444" parent="305" name="datum_pokretanja">
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="441" parent="305" name="status">
+    <column id="445" parent="305" name="status">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="442" parent="305" name="razlog_otkazivanja">
+    <column id="446" parent="305" name="razlog_otkazivanja">
       <Position>7</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <foreign-key id="443" parent="305" name="fk_izv_eksperiment">
+    <foreign-key id="447" parent="305" name="fk_izv_eksperiment">
       <ColNames>eksperiment_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="444" parent="305" name="fk_izv_lab">
+    <foreign-key id="448" parent="305" name="fk_izv_lab">
       <ColNames>laboratorija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <index id="445" parent="305" name="PRIMARY">
+    <index id="449" parent="305" name="PRIMARY">
       <ColNames>izvodjenje_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="446" parent="305" name="uq_izv_redni_broj">
+    <index id="450" parent="305" name="uq_izv_redni_broj">
       <ColNames>eksperiment_id
 redni_broj</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="447" parent="305" name="fk_izv_lab">
+    <index id="451" parent="305" name="fk_izv_lab">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="448" parent="305" name="PRIMARY">
+    <key id="452" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="449" parent="305" name="uq_izv_redni_broj">
+    <key id="453" parent="305" name="uq_izv_redni_broj">
       <UnderlyingIndexName>uq_izv_redni_broj</UnderlyingIndexName>
     </key>
-    <column id="450" parent="306" name="izvodjenje_id">
+    <column id="454" parent="306" name="izvodjenje_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="451" parent="306" name="istrazivac_id">
+    <column id="455" parent="306" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="452" parent="306" name="fk_ii_izvodjenje">
+    <foreign-key id="456" parent="306" name="fk_ii_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>izvodjenje_id</RefColNames>
       <RefTableName>izvodjenje</RefTableName>
     </foreign-key>
-    <foreign-key id="453" parent="306" name="fk_ii_istrazivac">
+    <foreign-key id="457" parent="306" name="fk_ii_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="454" parent="306" name="PRIMARY">
+    <index id="458" parent="306" name="PRIMARY">
       <ColNames>izvodjenje_id
 istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="455" parent="306" name="fk_ii_istrazivac">
+    <index id="459" parent="306" name="fk_ii_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="456" parent="306" name="PRIMARY">
+    <key id="460" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <trigger id="457" parent="306" name="trg_provera_dizajner_izvodjac">
+    <trigger id="461" parent="306" name="trg_provera_dizajner_izvodjac">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>454</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <column id="458" parent="307" name="laboratorija_id">
+    <column id="462" parent="307" name="laboratorija_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="459" parent="307" name="naziv">
+    <column id="463" parent="307" name="naziv">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="460" parent="307" name="opis_lokacije">
+    <column id="464" parent="307" name="opis_lokacije">
       <Position>3</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="461" parent="307" name="kapacitet">
+    <column id="465" parent="307" name="kapacitet">
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="462" parent="307" name="akreditacioni_status">
+    <column id="466" parent="307" name="akreditacioni_status">
       <Position>5</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <index id="463" parent="307" name="PRIMARY">
+    <index id="467" parent="307" name="PRIMARY">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="464" parent="307" name="PRIMARY">
+    <key id="468" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="465" parent="308" name="chk_lr_status">
+    <check id="469" parent="308" name="chk_lr_status">
       <Predicate>`status` in (_utf8mb4\&apos;Dostupan\&apos;,_utf8mb4\&apos;U upotrebi\&apos;,_utf8mb4\&apos;Potrosten\&apos;)</Predicate>
     </check>
-    <column id="466" parent="308" name="laboratorija_id">
+    <column id="470" parent="308" name="laboratorija_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="467" parent="308" name="resurs_id">
+    <column id="471" parent="308" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="468" parent="308" name="dostupna_kolicina">
+    <column id="472" parent="308" name="dostupna_kolicina">
       <DefaultExpression>0</DefaultExpression>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="469" parent="308" name="status">
+    <column id="473" parent="308" name="status">
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="470" parent="308" name="fk_lr_lab">
+    <foreign-key id="474" parent="308" name="fk_lr_lab">
       <ColNames>laboratorija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <foreign-key id="471" parent="308" name="fk_lr_resurs">
+    <foreign-key id="475" parent="308" name="fk_lr_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="472" parent="308" name="PRIMARY">
+    <index id="476" parent="308" name="PRIMARY">
       <ColNames>laboratorija_id
 resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="473" parent="308" name="fk_lr_resurs">
+    <index id="477" parent="308" name="fk_lr_resurs">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="474" parent="308" name="PRIMARY">
+    <key id="478" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="475" parent="309" name="chk_tip_materijala">
+    <check id="479" parent="309" name="chk_tip_materijala">
       <Predicate>`tip_materijala` in (_utf8mb4\&apos;Dokument\&apos;,_utf8mb4\&apos;PisanaBeleska\&apos;,_utf8mb4\&apos;VideoEvidencija\&apos;)</Predicate>
     </check>
-    <column id="476" parent="309" name="materijal_id">
+    <column id="480" parent="309" name="materijal_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="477" parent="309" name="clan_tima_id">
+    <column id="481" parent="309" name="clan_tima_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="478" parent="309" name="tip_materijala">
+    <column id="482" parent="309" name="tip_materijala">
       <Position>3</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="479" parent="309" name="sadrzaj_ili_putanja">
+    <column id="483" parent="309" name="sadrzaj_ili_putanja">
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="480" parent="309" name="vreme_kreiranja">
+    <column id="484" parent="309" name="vreme_kreiranja">
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="481" parent="309" name="fk_mct_clan">
+    <foreign-key id="485" parent="309" name="fk_mct_clan">
       <ColNames>clan_tima_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>clan_tima_id</RefColNames>
       <RefTableName>clantimaizvodjenja</RefTableName>
     </foreign-key>
-    <index id="482" parent="309" name="PRIMARY">
+    <index id="486" parent="309" name="PRIMARY">
       <ColNames>materijal_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="483" parent="309" name="fk_mct_clan">
+    <index id="487" parent="309" name="fk_mct_clan">
       <ColNames>clan_tima_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="484" parent="309" name="PRIMARY">
+    <key id="488" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="485" parent="310" name="chk_razliciti_ocenjivaci">
+    <check id="489" parent="310" name="chk_razliciti_ocenjivaci">
       <Predicate>`ocenjivac1_id` &lt;&gt; `ocenjivac2_id`</Predicate>
     </check>
-    <column id="486" parent="310" name="saglasnost_id">
+    <column id="490" parent="310" name="saglasnost_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="487" parent="310" name="rezultat_id">
+    <column id="491" parent="310" name="rezultat_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="488" parent="310" name="ocenjivac1_id">
+    <column id="492" parent="310" name="ocenjivac1_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="489" parent="310" name="ocenjivac2_id">
+    <column id="493" parent="310" name="ocenjivac2_id">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="490" parent="310" name="stepen_saglasnosti">
+    <column id="494" parent="310" name="stepen_saglasnosti">
       <Position>5</Position>
       <StoredType>decimal(5,4 digit)|0s</StoredType>
     </column>
-    <column id="491" parent="310" name="metod_saglasnosti">
+    <column id="495" parent="310" name="metod_saglasnosti">
       <Position>6</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="492" parent="310" name="vreme_izracunavanja">
+    <column id="496" parent="310" name="vreme_izracunavanja">
       <Position>7</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="493" parent="310" name="fk_ms_rezultat">
+    <foreign-key id="497" parent="310" name="fk_ms_rezultat">
       <ColNames>rezultat_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>rezultat_id</RefColNames>
       <RefTableName>rezultattesta</RefTableName>
     </foreign-key>
-    <foreign-key id="494" parent="310" name="fk_ms_ocenjivac1">
+    <foreign-key id="498" parent="310" name="fk_ms_ocenjivac1">
       <ColNames>ocenjivac1_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <foreign-key id="495" parent="310" name="fk_ms_ocenjivac2">
+    <foreign-key id="499" parent="310" name="fk_ms_ocenjivac2">
       <ColNames>ocenjivac2_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="496" parent="310" name="PRIMARY">
+    <index id="500" parent="310" name="PRIMARY">
       <ColNames>saglasnost_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="497" parent="310" name="fk_ms_rezultat">
+    <index id="501" parent="310" name="fk_ms_rezultat">
       <ColNames>rezultat_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="498" parent="310" name="fk_ms_ocenjivac1">
+    <index id="502" parent="310" name="fk_ms_ocenjivac1">
       <ColNames>ocenjivac1_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="499" parent="310" name="fk_ms_ocenjivac2">
+    <index id="503" parent="310" name="fk_ms_ocenjivac2">
       <ColNames>ocenjivac2_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="500" parent="310" name="PRIMARY">
+    <key id="504" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="501" parent="311" name="resurs_id">
+    <column id="505" parent="311" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="502" parent="311" name="jezik">
+    <column id="506" parent="311" name="jezik">
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="503" parent="311" name="verzija">
+    <column id="507" parent="311" name="verzija">
       <Position>3</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <foreign-key id="504" parent="311" name="fk_op_resurs">
+    <foreign-key id="508" parent="311" name="fk_op_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="505" parent="311" name="PRIMARY">
+    <index id="509" parent="311" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="506" parent="311" name="PRIMARY">
+    <key id="510" parent="311" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="507" parent="312" name="potrosnja_id">
+    <column id="511" parent="312" name="potrosnja_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="508" parent="312" name="sesija_id">
+    <column id="512" parent="312" name="sesija_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="509" parent="312" name="resurs_id">
+    <column id="513" parent="312" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="510" parent="312" name="iskoriscena_kolicina">
+    <column id="514" parent="312" name="iskoriscena_kolicina">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="511" parent="312" name="fk_prs_sesija">
+    <foreign-key id="515" parent="312" name="fk_prs_sesija">
       <ColNames>sesija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>sesija_id</RefColNames>
       <RefTableName>sesija</RefTableName>
     </foreign-key>
-    <foreign-key id="512" parent="312" name="fk_prs_resurs">
+    <foreign-key id="516" parent="312" name="fk_prs_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="513" parent="312" name="PRIMARY">
+    <index id="517" parent="312" name="PRIMARY">
       <ColNames>potrosnja_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="514" parent="312" name="fk_prs_sesija">
+    <index id="518" parent="312" name="fk_prs_sesija">
       <ColNames>sesija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="515" parent="312" name="fk_prs_resurs">
+    <index id="519" parent="312" name="fk_prs_resurs">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="516" parent="312" name="PRIMARY">
+    <key id="520" parent="312" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <trigger id="517" parent="312" name="trg_azuriraj_kolicinu_resursa">
+    <trigger id="521" parent="312" name="trg_azuriraj_kolicinu_resursa">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>676</SourceTextLength>
     </trigger>
-    <column id="518" parent="313" name="istrazivac_id">
+    <column id="522" parent="313" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="519" parent="313" name="teorijski_pravac">
+    <column id="523" parent="313" name="teorijski_pravac">
       <Position>2</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="520" parent="313" name="broj_objavljenih_radova">
+    <column id="524" parent="313" name="broj_objavljenih_radova">
       <DefaultExpression>0</DefaultExpression>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="521" parent="313" name="eticka_licenca">
+    <column id="525" parent="313" name="eticka_licenca">
       <Position>4</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <foreign-key id="522" parent="313" name="fk_pd_istrazivac">
+    <foreign-key id="526" parent="313" name="fk_pd_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="523" parent="313" name="PRIMARY">
+    <index id="527" parent="313" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="524" parent="313" name="PRIMARY">
+    <key id="528" parent="313" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="525" parent="314" name="istrazivac_id">
+    <column id="529" parent="314" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="526" parent="314" name="nivo_obuke_za_osetljive_grupe">
+    <column id="530" parent="314" name="nivo_obuke_za_osetljive_grupe">
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="527" parent="314" name="beleske">
+    <column id="531" parent="314" name="beleske">
       <Position>3</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <foreign-key id="528" parent="314" name="fk_pi_istrazivac">
+    <foreign-key id="532" parent="314" name="fk_pi_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="529" parent="314" name="PRIMARY">
+    <index id="533" parent="314" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="530" parent="314" name="PRIMARY">
+    <key id="534" parent="314" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="531" parent="315" name="resurs_id">
+    <column id="535" parent="315" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="532" parent="315" name="tip_testa">
+    <column id="536" parent="315" name="tip_testa">
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="533" parent="315" name="verzija">
+    <column id="537" parent="315" name="verzija">
       <Position>3</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="534" parent="315" name="standardizovan">
+    <column id="538" parent="315" name="standardizovan">
       <DefaultExpression>1</DefaultExpression>
       <Position>4</Position>
       <StoredType>tinyint(1)|0s</StoredType>
     </column>
-    <foreign-key id="535" parent="315" name="fk_pt_resurs">
+    <foreign-key id="539" parent="315" name="fk_pt_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="536" parent="315" name="PRIMARY">
+    <index id="540" parent="315" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="537" parent="315" name="PRIMARY">
+    <key id="541" parent="315" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="538" parent="316" name="chk_tip_resursa">
+    <check id="542" parent="316" name="chk_tip_resursa">
       <Predicate>`tip_resursa` in (_utf8mb4\&apos;PsiholoskiTest\&apos;,_utf8mb4\&apos;Upitnik\&apos;,_utf8mb4\&apos;StimulusniMaterijal\&apos;,_utf8mb4\&apos;ObrazacPristanka\&apos;,_utf8mb4\&apos;Ucesnik\&apos;)</Predicate>
     </check>
-    <column id="539" parent="316" name="resurs_id">
+    <column id="543" parent="316" name="resurs_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="540" parent="316" name="tip_resursa">
+    <column id="544" parent="316" name="tip_resursa">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="541" parent="316" name="naziv">
+    <column id="545" parent="316" name="naziv">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(300)|0s</StoredType>
     </column>
-    <column id="542" parent="316" name="opis">
+    <column id="546" parent="316" name="opis">
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <index id="543" parent="316" name="PRIMARY">
+    <index id="547" parent="316" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="544" parent="316" name="PRIMARY">
+    <key id="548" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="545" parent="317" name="rezultat_id">
+    <column id="549" parent="317" name="rezultat_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="546" parent="317" name="izvodjenje_id">
+    <column id="550" parent="317" name="izvodjenje_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="547" parent="317" name="sesija_id">
+    <column id="551" parent="317" name="sesija_id">
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="548" parent="317" name="ucesnik_id">
+    <column id="552" parent="317" name="ucesnik_id">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="549" parent="317" name="numericka_ocena">
+    <column id="553" parent="317" name="numericka_ocena">
       <Position>5</Position>
       <StoredType>decimal(10,3 digit)|0s</StoredType>
     </column>
-    <column id="550" parent="317" name="vreme_evidentiranja">
+    <column id="554" parent="317" name="vreme_evidentiranja">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="551" parent="317" name="fk_rt_izvodjenje">
+    <foreign-key id="555" parent="317" name="fk_rt_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>izvodjenje_id</RefColNames>
       <RefTableName>izvodjenje</RefTableName>
     </foreign-key>
-    <foreign-key id="552" parent="317" name="fk_rt_sesija">
+    <foreign-key id="556" parent="317" name="fk_rt_sesija">
       <ColNames>sesija_id</ColNames>
       <OnDelete>set-null</OnDelete>
       <RefColNames>sesija_id</RefColNames>
       <RefTableName>sesija</RefTableName>
     </foreign-key>
-    <foreign-key id="553" parent="317" name="fk_rt_ucesnik">
+    <foreign-key id="557" parent="317" name="fk_rt_ucesnik">
       <ColNames>ucesnik_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>ucesnik</RefTableName>
     </foreign-key>
-    <index id="554" parent="317" name="PRIMARY">
+    <index id="558" parent="317" name="PRIMARY">
       <ColNames>rezultat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="555" parent="317" name="fk_rt_izvodjenje">
+    <index id="559" parent="317" name="fk_rt_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="556" parent="317" name="fk_rt_sesija">
+    <index id="560" parent="317" name="fk_rt_sesija">
       <ColNames>sesija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="557" parent="317" name="fk_rt_ucesnik">
+    <index id="561" parent="317" name="fk_rt_ucesnik">
       <ColNames>ucesnik_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="558" parent="317" name="PRIMARY">
+    <key id="562" parent="317" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="559" parent="318" name="sertifikat_id">
+    <column id="563" parent="318" name="sertifikat_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="560" parent="318" name="istrazivac_id">
+    <column id="564" parent="318" name="istrazivac_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="561" parent="318" name="naziv_sertifikata">
+    <column id="565" parent="318" name="naziv_sertifikata">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <column id="562" parent="318" name="datum_izdavanja">
+    <column id="566" parent="318" name="datum_izdavanja">
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="563" parent="318" name="datum_isteka">
+    <column id="567" parent="318" name="datum_isteka">
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <foreign-key id="564" parent="318" name="fk_si_istrazivac">
+    <foreign-key id="568" parent="318" name="fk_si_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="565" parent="318" name="PRIMARY">
+    <index id="569" parent="318" name="PRIMARY">
       <ColNames>sertifikat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="566" parent="318" name="fk_si_istrazivac">
+    <index id="570" parent="318" name="fk_si_istrazivac">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="567" parent="318" name="PRIMARY">
+    <key id="571" parent="318" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="568" parent="319" name="chk_format_sesije">
+    <check id="572" parent="319" name="chk_format_sesije">
       <Predicate>`format` in (_utf8mb4\&apos;Individualna\&apos;,_utf8mb4\&apos;Grupna\&apos;)</Predicate>
     </check>
-    <check id="569" parent="319" name="chk_status_sesije">
+    <check id="573" parent="319" name="chk_status_sesije">
       <Predicate>`status` in (_utf8mb4\&apos;Zakazana\&apos;,_utf8mb4\&apos;UToku\&apos;,_utf8mb4\&apos;Zavrsena\&apos;,_utf8mb4\&apos;Otkazana\&apos;)</Predicate>
     </check>
-    <check id="570" parent="319" name="chk_tip_sesije">
+    <check id="574" parent="319" name="chk_tip_sesije">
       <Predicate>`tip_sesije` in (_utf8mb4\&apos;Uzivo\&apos;,_utf8mb4\&apos;Online\&apos;,_utf8mb4\&apos;Teren\&apos;)</Predicate>
     </check>
-    <check id="571" parent="319" name="chk_vreme">
+    <check id="575" parent="319" name="chk_vreme">
       <Predicate>`vreme_zavrsetka` &gt; `vreme_pocetka`</Predicate>
     </check>
-    <column id="572" parent="319" name="sesija_id">
+    <column id="576" parent="319" name="sesija_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="573" parent="319" name="izvodjenje_id">
+    <column id="577" parent="319" name="izvodjenje_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="574" parent="319" name="laboratorija_id">
+    <column id="578" parent="319" name="laboratorija_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="575" parent="319" name="datum_odrzavanja">
+    <column id="579" parent="319" name="datum_odrzavanja">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="576" parent="319" name="vreme_pocetka">
+    <column id="580" parent="319" name="vreme_pocetka">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <column id="577" parent="319" name="vreme_zavrsetka">
+    <column id="581" parent="319" name="vreme_zavrsetka">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <column id="578" parent="319" name="tip_sesije">
+    <column id="582" parent="319" name="tip_sesije">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="579" parent="319" name="format">
+    <column id="583" parent="319" name="format">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="580" parent="319" name="status">
+    <column id="584" parent="319" name="status">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="581" parent="319" name="url_platforme">
+    <column id="585" parent="319" name="url_platforme">
       <Position>10</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="582" parent="319" name="kapacitet_online">
+    <column id="586" parent="319" name="kapacitet_online">
       <Position>11</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="583" parent="319" name="fk_ses_izvodjenje">
+    <foreign-key id="587" parent="319" name="fk_ses_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>izvodjenje_id</RefColNames>
       <RefTableName>izvodjenje</RefTableName>
     </foreign-key>
-    <foreign-key id="584" parent="319" name="fk_ses_lab">
+    <foreign-key id="588" parent="319" name="fk_ses_lab">
       <ColNames>laboratorija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <index id="585" parent="319" name="PRIMARY">
+    <index id="589" parent="319" name="PRIMARY">
       <ColNames>sesija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="586" parent="319" name="fk_ses_izvodjenje">
+    <index id="590" parent="319" name="fk_ses_izvodjenje">
       <ColNames>izvodjenje_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="587" parent="319" name="fk_ses_lab">
+    <index id="591" parent="319" name="fk_ses_lab">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="588" parent="319" name="PRIMARY">
+    <key id="592" parent="319" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <trigger id="589" parent="319" name="trg_provera_preklapanja_sesija">
+    <trigger id="593" parent="319" name="trg_provera_preklapanja_sesija">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>503</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <trigger id="590" parent="319" name="trg_provera_preklapanja_sesija_update">
+    <trigger id="594" parent="319" name="trg_provera_preklapanja_sesija_update">
       <Definer>root@localhost</Definer>
       <Events>U</Events>
       <SourceTextLength>547</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <column id="591" parent="320" name="resurs_id">
+    <column id="595" parent="320" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="592" parent="320" name="tip_stimulusa">
+    <column id="596" parent="320" name="tip_stimulusa">
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="593" parent="320" name="format">
+    <column id="597" parent="320" name="format">
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="594" parent="320" name="fk_sm_resurs">
+    <foreign-key id="598" parent="320" name="fk_sm_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="595" parent="320" name="PRIMARY">
+    <index id="599" parent="320" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="596" parent="320" name="PRIMARY">
+    <key id="600" parent="320" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <check id="597" parent="321" name="chk_tip_ucesnika">
+    <check id="601" parent="321" name="chk_tip_ucesnika">
       <Predicate>`tip_ucesnika` in (_utf8mb4\&apos;Pojedinac\&apos;,_utf8mb4\&apos;BracniPar\&apos;,_utf8mb4\&apos;Porodica\&apos;,_utf8mb4\&apos;GrupaZaposlenih\&apos;,_utf8mb4\&apos;SportskiTim\&apos;)</Predicate>
     </check>
-    <column id="598" parent="321" name="resurs_id">
+    <column id="602" parent="321" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="599" parent="321" name="tip_ucesnika">
+    <column id="603" parent="321" name="tip_ucesnika">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="600" parent="321" name="starosna_grupa">
+    <column id="604" parent="321" name="starosna_grupa">
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="601" parent="321" name="profesija_ili_sport">
+    <column id="605" parent="321" name="profesija_ili_sport">
       <Position>4</Position>
       <StoredType>varchar(200)|0s</StoredType>
     </column>
-    <foreign-key id="602" parent="321" name="fk_uc_resurs">
+    <foreign-key id="606" parent="321" name="fk_uc_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="603" parent="321" name="PRIMARY">
+    <index id="607" parent="321" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="604" parent="321" name="PRIMARY">
+    <key id="608" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="605" parent="322" name="resurs_id">
+    <column id="609" parent="322" name="resurs_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="606" parent="322" name="broj_stavki">
+    <column id="610" parent="322" name="broj_stavki">
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="607" parent="322" name="format_odgovora">
+    <column id="611" parent="322" name="format_odgovora">
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <foreign-key id="608" parent="322" name="fk_u_resurs">
+    <foreign-key id="612" parent="322" name="fk_u_resurs">
       <ColNames>resurs_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="609" parent="322" name="PRIMARY">
+    <index id="613" parent="322" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="610" parent="322" name="PRIMARY">
+    <key id="614" parent="322" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="611" parent="323" name="upotreba_id">
+    <column id="615" parent="323" name="upotreba_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="612" parent="323" name="sesija_id">
+    <column id="616" parent="323" name="sesija_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="613" parent="323" name="alat_id">
+    <column id="617" parent="323" name="alat_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="614" parent="323" name="trajanje_minuta">
+    <column id="618" parent="323" name="trajanje_minuta">
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="615" parent="323" name="fk_uas_sesija">
+    <foreign-key id="619" parent="323" name="fk_uas_sesija">
       <ColNames>sesija_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>sesija_id</RefColNames>
       <RefTableName>sesija</RefTableName>
     </foreign-key>
-    <foreign-key id="616" parent="323" name="fk_uas_alat">
+    <foreign-key id="620" parent="323" name="fk_uas_alat">
       <ColNames>alat_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>alat_id</RefColNames>
       <RefTableName>alat</RefTableName>
     </foreign-key>
-    <index id="617" parent="323" name="PRIMARY">
+    <index id="621" parent="323" name="PRIMARY">
       <ColNames>upotreba_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="618" parent="323" name="fk_uas_sesija">
+    <index id="622" parent="323" name="fk_uas_sesija">
       <ColNames>sesija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="619" parent="323" name="fk_uas_alat">
+    <index id="623" parent="323" name="fk_uas_alat">
       <ColNames>alat_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="620" parent="323" name="PRIMARY">
+    <key id="624" parent="323" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="621" parent="324" name="alat_id">
-      <AutoIncrement>255</AutoIncrement>
-      <NotNull>1</NotNull>
+    <argument id="625" parent="324">
+      <ArgumentDirection>R</ArgumentDirection>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="626" parent="324" name="p_istrazivac_id">
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
-    </column>
-    <column id="622" parent="324" name="naziv">
+    </argument>
+    <argument id="627" parent="325" name="p_izvodjenje_id">
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </argument>
+    <argument id="628" parent="325" name="p_datum">
       <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="623" parent="324" name="proizvodjac">
+      <StoredType>date|0s</StoredType>
+    </argument>
+    <argument id="629" parent="325" name="p_vreme_pocetka">
       <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="624" parent="324" name="status">
+      <StoredType>time|0s</StoredType>
+    </argument>
+    <argument id="630" parent="325" name="p_vreme_zavrsetka">
       <Position>4</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="625" parent="324" name="laboratorija_id">
+      <StoredType>time|0s</StoredType>
+    </argument>
+    <argument id="631" parent="325" name="p_tip">
       <Position>5</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="626" parent="324" name="tip_alata_id">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="627" parent="324" name="alat_ibfk_1">
+      <StoredType>varchar(30)|0s</StoredType>
+    </argument>
+    <argument id="632" parent="326">
+      <ArgumentDirection>R</ArgumentDirection>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </argument>
+    <foreign-key id="633" parent="327" name="alat_ibfk_1">
       <ColNames>laboratorija_id</ColNames>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <foreign-key id="628" parent="324" name="alat_ibfk_2">
+    <foreign-key id="634" parent="327" name="alat_ibfk_2">
       <ColNames>tip_alata_id</ColNames>
       <RefColNames>tip_alata_id</RefColNames>
       <RefTableName>tipalata</RefTableName>
     </foreign-key>
-    <index id="629" parent="324" name="PRIMARY">
+    <index id="635" parent="327" name="PRIMARY">
       <ColNames>alat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="630" parent="324" name="laboratorija_id">
+    <index id="636" parent="327" name="laboratorija_id">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="631" parent="324" name="tip_alata_id">
+    <index id="637" parent="327" name="tip_alata_id">
       <ColNames>tip_alata_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="632" parent="324" name="PRIMARY">
+    <key id="638" parent="327" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="633" parent="325" name="istrazivac_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="634" parent="325" name="nivo_studija">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <foreign-key id="635" parent="325" name="asistent_ibfk_1">
+    <foreign-key id="639" parent="328" name="asistent_ibfk_1">
       <ColNames>istrazivac_id</ColNames>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="636" parent="325" name="PRIMARY">
+    <index id="640" parent="328" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="637" parent="325" name="PRIMARY">
+    <key id="641" parent="328" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="638" parent="326" name="eksperiment_id">
-      <AutoIncrement>131</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="639" parent="326" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="640" parent="326" name="cilj">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="641" parent="326" name="datum_pocetka">
-      <Position>4</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="642" parent="326" name="datum_zavrsetka">
-      <Position>5</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="643" parent="326" name="status">
-      <Position>6</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="644" parent="326" name="grana_id">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="645" parent="326" name="teorija_id">
-      <Position>8</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="646" parent="326" name="eksperiment_ibfk_1">
+    <foreign-key id="642" parent="329" name="eksperiment_ibfk_1">
       <ColNames>grana_id</ColNames>
       <RefColNames>grana_id</RefColNames>
       <RefTableName>granapsihologije</RefTableName>
     </foreign-key>
-    <foreign-key id="647" parent="326" name="eksperiment_ibfk_2">
+    <foreign-key id="643" parent="329" name="eksperiment_ibfk_2">
       <ColNames>teorija_id</ColNames>
       <RefColNames>teorija_id</RefColNames>
       <RefTableName>teorija</RefTableName>
     </foreign-key>
-    <index id="648" parent="326" name="PRIMARY">
+    <index id="644" parent="329" name="PRIMARY">
       <ColNames>eksperiment_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="649" parent="326" name="grana_id">
+    <index id="645" parent="329" name="grana_id">
       <ColNames>grana_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="650" parent="326" name="teorija_id">
+    <index id="646" parent="329" name="teorija_id">
       <ColNames>teorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="651" parent="326" name="PRIMARY">
+    <key id="647" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="652" parent="327" name="eksperiment_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="653" parent="327" name="alat_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="654" parent="327" name="eksperiment_alat_ibfk_1">
+    <foreign-key id="648" parent="330" name="eksperiment_alat_ibfk_1">
       <ColNames>eksperiment_id</ColNames>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="655" parent="327" name="eksperiment_alat_ibfk_2">
+    <foreign-key id="649" parent="330" name="eksperiment_alat_ibfk_2">
       <ColNames>alat_id</ColNames>
       <RefColNames>alat_id</RefColNames>
       <RefTableName>alat</RefTableName>
     </foreign-key>
-    <index id="656" parent="327" name="PRIMARY">
+    <index id="650" parent="330" name="PRIMARY">
       <ColNames>eksperiment_id
 alat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="657" parent="327" name="alat_id">
+    <index id="651" parent="330" name="alat_id">
       <ColNames>alat_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="658" parent="327" name="PRIMARY">
+    <key id="652" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="659" parent="328" name="eksperiment_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="660" parent="328" name="istrazivac_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="661" parent="328" name="uloga">
-      <Position>3</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <foreign-key id="662" parent="328" name="eksperiment_istrazivac_ibfk_1">
+    <foreign-key id="653" parent="331" name="eksperiment_istrazivac_ibfk_1">
       <ColNames>eksperiment_id</ColNames>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="663" parent="328" name="eksperiment_istrazivac_ibfk_2">
+    <foreign-key id="654" parent="331" name="eksperiment_istrazivac_ibfk_2">
       <ColNames>istrazivac_id</ColNames>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="664" parent="328" name="PRIMARY">
+    <index id="655" parent="331" name="PRIMARY">
       <ColNames>eksperiment_id
 istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="665" parent="328" name="istrazivac_id">
+    <index id="656" parent="331" name="istrazivac_id">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="666" parent="328" name="PRIMARY">
+    <key id="657" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="667" parent="329" name="eksperiment_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="668" parent="329" name="resurs_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="669" parent="329" name="potrebna_kolicina">
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="670" parent="329" name="eksperiment_resurs_ibfk_1">
+    <foreign-key id="658" parent="332" name="eksperiment_resurs_ibfk_1">
       <ColNames>eksperiment_id</ColNames>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="671" parent="329" name="eksperiment_resurs_ibfk_2">
+    <foreign-key id="659" parent="332" name="eksperiment_resurs_ibfk_2">
       <ColNames>resurs_id</ColNames>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="672" parent="329" name="PRIMARY">
+    <index id="660" parent="332" name="PRIMARY">
       <ColNames>eksperiment_id
 resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="673" parent="329" name="resurs_id">
+    <index id="661" parent="332" name="resurs_id">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="674" parent="329" name="PRIMARY">
+    <key id="662" parent="332" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="675" parent="330" name="grana_id">
-      <AutoIncrement>6</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="676" parent="330" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="677" parent="330" name="opis">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="678" parent="330" name="PRIMARY">
+    <index id="663" parent="333" name="PRIMARY">
       <ColNames>grana_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="679" parent="330" name="PRIMARY">
+    <key id="664" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="680" parent="331" name="ispitanik_id">
-      <AutoIncrement>133</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="681" parent="331" name="ime">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="682" parent="331" name="prezime">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="683" parent="331" name="starost">
-      <Position>4</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="684" parent="331" name="pol">
-      <Position>5</Position>
-      <StoredType>varchar(10)|0s</StoredType>
-    </column>
-    <column id="685" parent="331" name="kategorija">
-      <Position>6</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <index id="686" parent="331" name="PRIMARY">
+    <index id="665" parent="334" name="PRIMARY">
       <ColNames>ispitanik_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="687" parent="331" name="PRIMARY">
+    <key id="666" parent="334" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="688" parent="332" name="istrazivac_id">
-      <AutoIncrement>133</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="689" parent="332" name="ime">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="690" parent="332" name="prezime">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="691" parent="332" name="kontakt">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="692" parent="332" name="PRIMARY">
+    <index id="667" parent="335" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="693" parent="332" name="PRIMARY">
+    <key id="668" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="694" parent="333" name="izvodjenje_id">
-      <AutoIncrement>131</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="695" parent="333" name="datum">
-      <Position>2</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="696" parent="333" name="trajanje">
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="697" parent="333" name="status">
-      <Position>4</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="698" parent="333" name="eksperiment_id">
-      <Position>5</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="699" parent="333" name="laboratorija_id">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="700" parent="333" name="izvodjenje_ibfk_1">
+    <foreign-key id="669" parent="336" name="izvodjenje_ibfk_1">
       <ColNames>eksperiment_id</ColNames>
       <RefColNames>eksperiment_id</RefColNames>
       <RefTableName>eksperiment</RefTableName>
     </foreign-key>
-    <foreign-key id="701" parent="333" name="izvodjenje_ibfk_2">
+    <foreign-key id="670" parent="336" name="izvodjenje_ibfk_2">
       <ColNames>laboratorija_id</ColNames>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <index id="702" parent="333" name="PRIMARY">
+    <index id="671" parent="336" name="PRIMARY">
       <ColNames>izvodjenje_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="703" parent="333" name="eksperiment_id">
+    <index id="672" parent="336" name="eksperiment_id">
       <ColNames>eksperiment_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="704" parent="333" name="laboratorija_id">
+    <index id="673" parent="336" name="laboratorija_id">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="705" parent="333" name="PRIMARY">
+    <key id="674" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="706" parent="334" name="korisnik_id">
-      <AutoIncrement>16</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="707" parent="334" name="ime">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="708" parent="334" name="prezime">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="709" parent="334" name="email">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="710" parent="334" name="korisnicko_ime">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="711" parent="334" name="lozinka">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <column id="712" parent="334" name="uloga">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>enum(&apos;istrazivac&apos;, &apos;administrator&apos;, &apos;eksterni_korisnik&apos;)|0e</StoredType>
-    </column>
-    <column id="713" parent="334" name="datum_kreiranja">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>datetime|0s</StoredType>
-    </column>
-    <index id="714" parent="334" name="PRIMARY">
+    <index id="675" parent="337" name="PRIMARY">
       <ColNames>korisnik_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="715" parent="334" name="email">
+    <index id="676" parent="337" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="716" parent="334" name="korisnicko_ime">
+    <index id="677" parent="337" name="korisnicko_ime">
       <ColNames>korisnicko_ime</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="717" parent="334" name="PRIMARY">
+    <key id="678" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="718" parent="334" name="email">
+    <key id="679" parent="337" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <key id="719" parent="334" name="korisnicko_ime">
+    <key id="680" parent="337" name="korisnicko_ime">
       <UnderlyingIndexName>korisnicko_ime</UnderlyingIndexName>
     </key>
-    <column id="720" parent="335" name="laboratorija_id">
-      <AutoIncrement>133</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="721" parent="335" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="722" parent="335" name="lokacija">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="723" parent="335" name="tip">
-      <Position>4</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="724" parent="335" name="kapacitet">
-      <Position>5</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <index id="725" parent="335" name="PRIMARY">
+    <index id="681" parent="338" name="PRIMARY">
       <ColNames>laboratorija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="726" parent="335" name="PRIMARY">
+    <key id="682" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="727" parent="336" name="laboratorija_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="728" parent="336" name="resurs_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="729" parent="336" name="dostupna_kolicina">
-      <Position>3</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="730" parent="336" name="laboratorija_resurs_ibfk_1">
+    <foreign-key id="683" parent="339" name="laboratorija_resurs_ibfk_1">
       <ColNames>laboratorija_id</ColNames>
       <RefColNames>laboratorija_id</RefColNames>
       <RefTableName>laboratorija</RefTableName>
     </foreign-key>
-    <foreign-key id="731" parent="336" name="laboratorija_resurs_ibfk_2">
+    <foreign-key id="684" parent="339" name="laboratorija_resurs_ibfk_2">
       <ColNames>resurs_id</ColNames>
       <RefColNames>resurs_id</RefColNames>
       <RefTableName>resurs</RefTableName>
     </foreign-key>
-    <index id="732" parent="336" name="PRIMARY">
+    <index id="685" parent="339" name="PRIMARY">
       <ColNames>laboratorija_id
 resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="733" parent="336" name="resurs_id">
+    <index id="686" parent="339" name="resurs_id">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="734" parent="336" name="PRIMARY">
+    <key id="687" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="735" parent="337" name="istrazivac_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="736" parent="337" name="oblast_ekspertize">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <foreign-key id="737" parent="337" name="psiholog_ibfk_1">
+    <foreign-key id="688" parent="340" name="psiholog_ibfk_1">
       <ColNames>istrazivac_id</ColNames>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="738" parent="337" name="PRIMARY">
+    <index id="689" parent="340" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="739" parent="337" name="PRIMARY">
+    <key id="690" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="740" parent="338" name="test_id">
-      <AutoIncrement>20</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="741" parent="338" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="742" parent="338" name="vrsta">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="743" parent="338" name="opis">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="744" parent="338" name="max_poena">
-      <Position>5</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <index id="745" parent="338" name="PRIMARY">
+    <index id="691" parent="341" name="PRIMARY">
       <ColNames>test_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="746" parent="338" name="PRIMARY">
+    <key id="692" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="747" parent="339" name="istrazivac_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="748" parent="339" name="licenca">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <foreign-key id="749" parent="339" name="psihoterapeut_ibfk_1">
+    <foreign-key id="693" parent="342" name="psihoterapeut_ibfk_1">
       <ColNames>istrazivac_id</ColNames>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="750" parent="339" name="PRIMARY">
+    <index id="694" parent="342" name="PRIMARY">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="751" parent="339" name="PRIMARY">
+    <key id="695" parent="342" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="752" parent="340" name="resurs_id">
-      <AutoIncrement>133</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="753" parent="340" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="754" parent="340" name="vrsta">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="755" parent="340" name="opis">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="756" parent="340" name="PRIMARY">
+    <index id="696" parent="343" name="PRIMARY">
       <ColNames>resurs_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="757" parent="340" name="PRIMARY">
+    <key id="697" parent="343" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="758" parent="341" name="rezultat_id">
-      <AutoIncrement>131</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="759" parent="341" name="broj_poena">
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="760" parent="341" name="ocena">
-      <Position>3</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="761" parent="341" name="feedback">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="762" parent="341" name="datum">
-      <Position>5</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="763" parent="341" name="ispitanik_id">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="764" parent="341" name="test_id">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="765" parent="341" name="rezultattesta_ibfk_1">
+    <foreign-key id="698" parent="344" name="rezultattesta_ibfk_1">
       <ColNames>ispitanik_id</ColNames>
       <RefColNames>ispitanik_id</RefColNames>
       <RefTableName>ispitanik</RefTableName>
     </foreign-key>
-    <foreign-key id="766" parent="341" name="rezultattesta_ibfk_2">
+    <foreign-key id="699" parent="344" name="rezultattesta_ibfk_2">
       <ColNames>test_id</ColNames>
       <RefColNames>test_id</RefColNames>
       <RefTableName>psiholoskitest</RefTableName>
     </foreign-key>
-    <index id="767" parent="341" name="PRIMARY">
+    <index id="700" parent="344" name="PRIMARY">
       <ColNames>rezultat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="768" parent="341" name="ispitanik_id">
+    <index id="701" parent="344" name="ispitanik_id">
       <ColNames>ispitanik_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="769" parent="341" name="test_id">
+    <index id="702" parent="344" name="test_id">
       <ColNames>test_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="770" parent="341" name="PRIMARY">
+    <key id="703" parent="344" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="771" parent="342" name="sesija_id">
-      <AutoIncrement>131</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="772" parent="342" name="datum">
-      <Position>2</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="773" parent="342" name="vreme_pocetka">
-      <Position>3</Position>
-      <StoredType>time|0s</StoredType>
-    </column>
-    <column id="774" parent="342" name="vreme_zavrsetka">
-      <Position>4</Position>
-      <StoredType>time|0s</StoredType>
-    </column>
-    <column id="775" parent="342" name="tip">
-      <Position>5</Position>
-      <StoredType>varchar(30)|0s</StoredType>
-    </column>
-    <column id="776" parent="342" name="izvodjenje_id">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="777" parent="342" name="sesija_ibfk_1">
+    <foreign-key id="704" parent="345" name="sesija_ibfk_1">
       <ColNames>izvodjenje_id</ColNames>
       <RefColNames>izvodjenje_id</RefColNames>
       <RefTableName>izvodjenje</RefTableName>
     </foreign-key>
-    <index id="778" parent="342" name="PRIMARY">
+    <index id="705" parent="345" name="PRIMARY">
       <ColNames>sesija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="779" parent="342" name="izvodjenje_id">
+    <index id="706" parent="345" name="izvodjenje_id">
       <ColNames>izvodjenje_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="780" parent="342" name="PRIMARY">
+    <key id="707" parent="345" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="781" parent="343" name="sesija_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="782" parent="343" name="ispitanik_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="783" parent="343" name="sesija_ispitanik_ibfk_1">
+    <foreign-key id="708" parent="346" name="sesija_ispitanik_ibfk_1">
       <ColNames>sesija_id</ColNames>
       <RefColNames>sesija_id</RefColNames>
       <RefTableName>sesija</RefTableName>
     </foreign-key>
-    <foreign-key id="784" parent="343" name="sesija_ispitanik_ibfk_2">
+    <foreign-key id="709" parent="346" name="sesija_ispitanik_ibfk_2">
       <ColNames>ispitanik_id</ColNames>
       <RefColNames>ispitanik_id</RefColNames>
       <RefTableName>ispitanik</RefTableName>
     </foreign-key>
-    <index id="785" parent="343" name="PRIMARY">
+    <index id="710" parent="346" name="PRIMARY">
       <ColNames>sesija_id
 ispitanik_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="786" parent="343" name="ispitanik_id">
+    <index id="711" parent="346" name="ispitanik_id">
       <ColNames>ispitanik_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="787" parent="343" name="PRIMARY">
+    <key id="712" parent="346" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="788" parent="344" name="sesija_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="789" parent="344" name="test_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="790" parent="344" name="sesija_test_ibfk_1">
+    <foreign-key id="713" parent="347" name="sesija_test_ibfk_1">
       <ColNames>sesija_id</ColNames>
       <RefColNames>sesija_id</RefColNames>
       <RefTableName>sesija</RefTableName>
     </foreign-key>
-    <foreign-key id="791" parent="344" name="sesija_test_ibfk_2">
+    <foreign-key id="714" parent="347" name="sesija_test_ibfk_2">
       <ColNames>test_id</ColNames>
       <RefColNames>test_id</RefColNames>
       <RefTableName>psiholoskitest</RefTableName>
     </foreign-key>
-    <index id="792" parent="344" name="PRIMARY">
+    <index id="715" parent="347" name="PRIMARY">
       <ColNames>sesija_id
 test_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="793" parent="344" name="test_id">
+    <index id="716" parent="347" name="test_id">
       <ColNames>test_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="794" parent="344" name="PRIMARY">
+    <key id="717" parent="347" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="795" parent="345" name="teorija_id">
-      <AutoIncrement>16</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="796" parent="345" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="797" parent="345" name="oblast">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="798" parent="345" name="opis">
-      <Position>4</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="799" parent="345" name="PRIMARY">
+    <index id="718" parent="348" name="PRIMARY">
       <ColNames>teorija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="800" parent="345" name="PRIMARY">
+    <key id="719" parent="348" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="801" parent="346" name="terapija_id">
-      <AutoIncrement>131</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="802" parent="346" name="tip">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="803" parent="346" name="opis">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="804" parent="346" name="datum_pocetka">
-      <Position>4</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="805" parent="346" name="datum_zavrsetka">
-      <Position>5</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="806" parent="346" name="ispitanik_id">
-      <Position>6</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="807" parent="346" name="istrazivac_id">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <foreign-key id="808" parent="346" name="terapija_ibfk_1">
+    <foreign-key id="720" parent="349" name="terapija_ibfk_1">
       <ColNames>ispitanik_id</ColNames>
       <RefColNames>ispitanik_id</RefColNames>
       <RefTableName>ispitanik</RefTableName>
     </foreign-key>
-    <foreign-key id="809" parent="346" name="terapija_ibfk_2">
+    <foreign-key id="721" parent="349" name="terapija_ibfk_2">
       <ColNames>istrazivac_id</ColNames>
       <RefColNames>istrazivac_id</RefColNames>
       <RefTableName>istrazivac</RefTableName>
     </foreign-key>
-    <index id="810" parent="346" name="PRIMARY">
+    <index id="722" parent="349" name="PRIMARY">
       <ColNames>terapija_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="811" parent="346" name="ispitanik_id">
+    <index id="723" parent="349" name="ispitanik_id">
       <ColNames>ispitanik_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="812" parent="346" name="istrazivac_id">
+    <index id="724" parent="349" name="istrazivac_id">
       <ColNames>istrazivac_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="813" parent="346" name="PRIMARY">
+    <key id="725" parent="349" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="814" parent="347" name="tip_alata_id">
-      <AutoIncrement>14</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="815" parent="347" name="naziv">
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="816" parent="347" name="opis">
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="817" parent="347" name="PRIMARY">
+    <index id="726" parent="350" name="PRIMARY">
       <ColNames>tip_alata_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="818" parent="347" name="PRIMARY">
+    <key id="727" parent="350" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
+    <column id="728" parent="351" name="laboratorija_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="729" parent="351" name="laboratorija">
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="730" parent="351" name="lokacija">
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="731" parent="351" name="broj_istrazivaca">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="732" parent="351" name="broj_izvodjenja">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
   </database-model>
 </dataSource>
