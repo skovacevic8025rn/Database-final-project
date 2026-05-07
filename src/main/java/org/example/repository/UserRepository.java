@@ -1,6 +1,5 @@
 package org.example.repository;
 
-
 import org.example.model.User;
 import org.example.repository.connection.DatabaseConnection;
 
@@ -14,7 +13,7 @@ public class UserRepository {
     }
 
     public Optional<User> findByKorisnickoImeILozinka(String korisnickoIme, String lozinka) throws SQLException {
-        String sql = "SELECT * FROM users WHERE korisnicko_ime = ? AND lozinka = ?";
+        String sql = "SELECT * FROM korisnik WHERE korisnicko_ime = ? AND lozinka = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, korisnickoIme);
             ps.setString(2, lozinka);
@@ -27,31 +26,27 @@ public class UserRepository {
     }
 
     public boolean existsByKorisnickoIme(String korisnickoIme) throws SQLException {
-        String sql = "SELECT COUNT(*) FROM users WHERE korisnicko_ime = ?";
+        String sql = "SELECT COUNT(*) FROM korisnik WHERE korisnicko_ime = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, korisnickoIme);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return rs.getInt(1) > 0;
-            }
+            if (rs.next()) return rs.getInt(1) > 0;
         }
         return false;
     }
 
     public boolean existsByEmail(String email) throws SQLException {
-        String sql = "SELECT COUNT(*) FROM users WHERE email = ?";
+        String sql = "SELECT COUNT(*) FROM korisnik WHERE email = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return rs.getInt(1) > 0;
-            }
+            if (rs.next()) return rs.getInt(1) > 0;
         }
         return false;
     }
 
     public boolean save(User user) throws SQLException {
-        String sql = "INSERT INTO users (ime, prezime, email, korisnicko_ime, lozinka, uloga) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO korisnik (ime, prezime, email, korisnicko_ime, lozinka, uloga) VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, user.getName());
             ps.setString(2, user.getSurname());
@@ -65,7 +60,7 @@ public class UserRepository {
 
     private User mapRow(ResultSet rs) throws SQLException {
         User u = new User();
-        u.setId(rs.getInt("id"));
+        u.setId(rs.getInt("korisnik_id"));
         u.setName(rs.getString("ime"));
         u.setSurname(rs.getString("prezime"));
         u.setEmail(rs.getString("email"));
@@ -75,4 +70,3 @@ public class UserRepository {
         return u;
     }
 }
-

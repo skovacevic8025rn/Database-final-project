@@ -107,33 +107,46 @@ public class LoginForm extends JFrame {
         return f;
     }
 
+
     private void login() {
         String korisnickoIme = tfEmail.getText().trim();
         String lozinka       = new String(pfLozinka.getPassword());
 
         if (korisnickoIme.isEmpty()) {
             lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("⚠  Unesite korisničko ime."); return;
+            lblStatus.setText(" Unesite korisničko ime."); return;
         }
         if (lozinka.isEmpty()) {
             lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("⚠  Unesite lozinku."); return;
+            lblStatus.setText(" Unesite lozinku."); return;
         }
 
         try {
             org.example.service.AuthService authService = new org.example.service.AuthService();
             java.util.Optional<org.example.model.User> user = authService.login(korisnickoIme, lozinka);
             if (user.isPresent()) {
-                lblStatus.setForeground(Color.SUCCESS_CLR);
-                lblStatus.setText("✔  Dobrodošli, " + user.get().getUsername() + "!");
-                btnLogin.setEnabled(false);
+                org.example.model.User u = user.get();
+                if ("istrazivac".equals(u.getRole())) {
+                    dispose();
+                    new ResearcherDashboard(u);
+                } else if ("administrator".equals(u.getRole())) {
+                    dispose();
+                    new AdminDashboard(u);
+                } else if ("eksterni_korisnik".equals(u.getRole())) {
+                    dispose();
+                    new EksterniKorisnikDashboard(u);
+                } else {
+                    lblStatus.setForeground(Color.SUCCESS_CLR);
+                    lblStatus.setText(" Dobrodošli, " + u.getUsername() + "!");
+                    btnLogin.setEnabled(false);
+                }
             } else {
                 lblStatus.setForeground(Color.ERROR_CLR);
-                lblStatus.setText("⚠  Pogrešno korisničko ime ili lozinka.");
+                lblStatus.setText(" Pogrešno korisničko ime ili lozinka.");
             }
         } catch (Exception ex) {
             lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("⚠  Greška: " + ex.getMessage());
+            lblStatus.setText(" Greška: " + ex.getMessage());
         }
     }
 

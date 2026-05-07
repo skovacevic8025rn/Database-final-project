@@ -65,7 +65,7 @@ public class RegistrationForm extends JFrame {
         colEmail.setMaximumSize(new Dimension(Integer.MAX_VALUE, 58));
 
         tfKorisnickoIme = new RoundedField();
-        String[] uloge = {"— Odaberite ulogu —", "Korisnik", "Moderator", "Administrator"};
+        String[] uloge = {"— Odaberite ulogu —", "istrazivac", "administrator", "eksterni_korisnik"};
         cbUloga = new JComboBox<>(uloge);
         cbUloga.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         cbUloga.setBackground(Color.FIELD_BG);
