@@ -21,3 +21,6 @@ replay_pid*
 
 src/main/resources/
 db.cfg
+
+.idea/
+*.iml
