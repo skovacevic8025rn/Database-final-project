@@ -1,7 +1,5 @@
 package org.example.model;
 
-//proba za git commit
-
 public class User {
 
     private int id;
@@ -10,18 +8,16 @@ public class User {
     private String email;
     private String username;
     private String password;
-    private String role;
 
     public User() {}
 
     public User(String name, String surname, String email,
-                String username, String password, String role) {
+                String username, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.username = username;
         this.password = password;
-        this.role = role;
     }
 
     public int    getId()            { return id; }
@@ -42,11 +38,9 @@ public class User {
     public String getPassword()                 { return password; }
     public void setPassword(String password)   { this.password = password; }
 
-    public String getRole()               { return role; }
-    public void setRole(String role)   { this.role = role; }
 
     @Override
     public String toString() {
-        return "User{id=" + id + ", korisnickoIme='" + username + "', uloga='" + role + "'}";
+        return "User{id=" + id + ", korisnickoIme='" + username + "', uloga='" + "'}";
     }
 }

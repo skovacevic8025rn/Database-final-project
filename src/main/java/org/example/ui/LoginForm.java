@@ -125,21 +125,10 @@ public class LoginForm extends JFrame {
             org.example.service.AuthService authService = new org.example.service.AuthService();
             java.util.Optional<org.example.model.User> user = authService.login(korisnickoIme, lozinka);
             if (user.isPresent()) {
+                //if user postoji u bazi
                 org.example.model.User u = user.get();
-                if ("istrazivac".equals(u.getRole())) {
-                    dispose();
-                    new ResearcherDashboard(u);
-                } else if ("administrator".equals(u.getRole())) {
-                    dispose();
-                    new AdminDashboard(u);
-                } else if ("eksterni_korisnik".equals(u.getRole())) {
-                    dispose();
-                    new EksterniKorisnikDashboard(u);
-                } else {
-                    lblStatus.setForeground(Color.SUCCESS_CLR);
-                    lblStatus.setText(" Dobrodošli, " + u.getUsername() + "!");
-                    btnLogin.setEnabled(false);
-                }
+                dispose();
+                new ResearcherDashboard(u);
             } else {
                 lblStatus.setForeground(Color.ERROR_CLR);
                 lblStatus.setText(" Pogrešno korisničko ime ili lozinka.");

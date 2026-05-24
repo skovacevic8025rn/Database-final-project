@@ -17,7 +17,6 @@ public class AuthService {
 
     /**
      * Prijavljuje korisnika.
-     * Vraća User objekat ako su podaci ispravni, ili prazan Optional ako nisu.
      *
      * @param korisnickoIme korisničko ime
      * @param lozinka       lozinka
@@ -59,9 +58,9 @@ public class AuthService {
         if (user.getPassword() == null || user.getPassword().length() < 8) {
             throw new IllegalArgumentException("Lozinka mora imati najmanje 8 karaktera.");
         }
-        if (user.getRole() == null || user.getRole().isBlank()) {
-            throw new IllegalArgumentException("Uloga je obavezna.");
-        }
+      //  if (user.getRole() == null || user.getRole().isBlank()) {
+     //       throw new IllegalArgumentException("Uloga je obavezna.");
+     //   }
         if (userRepository.existsByKorisnickoIme(user.getUsername())) {
             throw new IllegalArgumentException("Korisničko ime '" + user.getUsername() + "' je već zauzeto.");
         }

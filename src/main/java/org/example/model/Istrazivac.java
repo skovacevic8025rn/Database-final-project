@@ -1,6 +1,7 @@
 package org.example.model;
 
 public class Istrazivac {
+    //extenduje User klasu
     private int    istrazivacId;
     private String ime;
     private String prezime;

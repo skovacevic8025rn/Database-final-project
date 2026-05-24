@@ -64,7 +64,9 @@ public class RegistrationForm extends JFrame {
         colEmail.setAlignmentX(LEFT_ALIGNMENT);
         colEmail.setMaximumSize(new Dimension(Integer.MAX_VALUE, 58));
 
-        tfKorisnickoIme = new RoundedField();
+        //ovo se brise sve
+        /*
+        KorisnickoIme = new RoundedField();
         String[] uloge = {"— Odaberite ulogu —", "istrazivac", "administrator", "eksterni_korisnik"};
         cbUloga = new JComboBox<>(uloge);
         cbUloga.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -73,7 +75,7 @@ public class RegistrationForm extends JFrame {
         cbUloga.setBorder(BorderFactory.createLineBorder(Color.FIELD_BOR, 1));
         cbUloga.setFocusable(false);
         JPanel row3 = hRow("Korisničko ime", tfKorisnickoIme, "Uloga", cbUloga);
-
+        */
         pfLozinka = new RoundedPass();
         pfPotvrda = new RoundedPass();
         JPanel row4 = hRow("Lozinka", pfLozinka, "Potvrdi lozinku", pfPotvrda);
@@ -124,7 +126,7 @@ public class RegistrationForm extends JFrame {
         body.add(Box.createVerticalStrut(10));
         body.add(colEmail);
         body.add(Box.createVerticalStrut(10));
-        body.add(row3);
+        //body.add(row3);
         body.add(Box.createVerticalStrut(10));
         body.add(row4);
         body.add(Box.createVerticalStrut(8));
@@ -201,7 +203,7 @@ public class RegistrationForm extends JFrame {
         if (tfPrezime.getText().trim().isEmpty())                                            { lblStatus.setText("⚠  Prezime je obavezno."); return; }
         if (!java.util.regex.Pattern.matches("^[\\w.+-]+@[\\w-]+\\.[a-z]{2,}$", tfEmail.getText().trim())) { lblStatus.setText("⚠  Unesite ispravnu email adresu."); return; }
         if (tfKorisnickoIme.getText().trim().length() < 3)                                   { lblStatus.setText("⚠  Korisničko ime mora imati najmanje 3 karaktera."); return; }
-        if (cbUloga.getSelectedIndex() == 0)                                                 { lblStatus.setText("⚠  Odaberite ulogu."); return; }
+      //  if (cbUloga.getSelectedIndex() == 0)                                                 { lblStatus.setText("⚠  Odaberite ulogu."); return; }
         String pass = new String(pfLozinka.getPassword());
         if (pass.length() < 8)                                                               { lblStatus.setText("⚠  Lozinka mora imati najmanje 8 karaktera."); return; }
         if (!pass.equals(new String(pfPotvrda.getPassword())))                               { lblStatus.setText("⚠  Lozinke se ne poklapaju."); return; }
@@ -213,9 +215,7 @@ public class RegistrationForm extends JFrame {
                     tfPrezime.getText().trim(),
                     tfEmail.getText().trim(),
                     tfKorisnickoIme.getText().trim(),
-                    pass,
-                    (String) cbUloga.getSelectedItem()
-            );
+                    pass);
             org.example.service.AuthService authService = new org.example.service.AuthService();
             authService.register(user);
             lblStatus.setForeground(Color.SUCCESS_CLR);
