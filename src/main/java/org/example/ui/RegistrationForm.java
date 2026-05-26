@@ -202,7 +202,7 @@ public class RegistrationForm extends JFrame {
         if (tfIme.getText().trim().isEmpty())                                                { lblStatus.setText("⚠  Ime je obavezno."); return; }
         if (tfPrezime.getText().trim().isEmpty())                                            { lblStatus.setText("⚠  Prezime je obavezno."); return; }
         if (!java.util.regex.Pattern.matches("^[\\w.+-]+@[\\w-]+\\.[a-z]{2,}$", tfEmail.getText().trim())) { lblStatus.setText("⚠  Unesite ispravnu email adresu."); return; }
-        if (tfKorisnickoIme.getText().trim().length() < 3)                                   { lblStatus.setText("⚠  Korisničko ime mora imati najmanje 3 karaktera."); return; }
+       // if (tfKorisnickoIme.getText().trim().length() < 3)                                   { lblStatus.setText("⚠  Korisničko ime mora imati najmanje 3 karaktera."); return; }
       //  if (cbUloga.getSelectedIndex() == 0)                                                 { lblStatus.setText("⚠  Odaberite ulogu."); return; }
         String pass = new String(pfLozinka.getPassword());
         if (pass.length() < 8)                                                               { lblStatus.setText("⚠  Lozinka mora imati najmanje 8 karaktera."); return; }
@@ -214,7 +214,7 @@ public class RegistrationForm extends JFrame {
                     tfIme.getText().trim(),
                     tfPrezime.getText().trim(),
                     tfEmail.getText().trim(),
-                    tfKorisnickoIme.getText().trim(),
+                    tfEmail.getText().trim(),
                     pass);
             org.example.service.AuthService authService = new org.example.service.AuthService();
             authService.register(user);
@@ -226,14 +226,14 @@ public class RegistrationForm extends JFrame {
             lblStatus.setText("⚠  " + ex.getMessage());
         } catch (Exception ex) {
             lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("⚠  Greška: " + ex.getMessage());
+            lblStatus.setText("Greška: " + ex.getMessage());
         }
     }
 
     private void ocisti() {
         tfIme.setText(""); tfPrezime.setText(""); tfEmail.setText("");
-        tfKorisnickoIme.setText(""); pfLozinka.setText(""); pfPotvrda.setText("");
-        cbUloga.setSelectedIndex(0); chkUslovi.setSelected(false);
+        pfLozinka.setText(""); pfPotvrda.setText("");
+        chkUslovi.setSelected(false);
         lblStatus.setText(" "); pbStrength.setValue(0);
         lblStrengthText.setText("Unesite lozinku");
         pbStrength.setForeground(Color.ERROR_CLR);

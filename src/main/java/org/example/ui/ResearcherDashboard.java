@@ -30,7 +30,7 @@ public class ResearcherDashboard extends JFrame {
         Optional<Istrazivac> opt = repo.findByIme(user.getName(), user.getSurname());
         if (opt.isEmpty()) {
             add(buildHeader(user), BorderLayout.NORTH);
-            JLabel lbl = new JLabel("⚠  Profil istraživača nije pronađen u bazi.");
+            JLabel lbl = new JLabel("Profil istraživača nije pronađen u bazi.");
             lbl.setFont(new Font("Segoe UI", Font.PLAIN, 14));
             lbl.setForeground(Color.ERROR_CLR);
             lbl.setBorder(new EmptyBorder(30, 30, 0, 0));
@@ -83,7 +83,6 @@ public class ResearcherDashboard extends JFrame {
         p.add(new JScrollPane(tabela), BorderLayout.CENTER);
         return p;
     }
-    // ── Tab 2: Promena statusa ────────────────────────────────────────────────
     private JPanel buildTabStatus() throws Exception {
         JPanel p = new JPanel();
         p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
@@ -124,8 +123,7 @@ public class ResearcherDashboard extends JFrame {
                 lblRez.setText(ok ? " Status uspešno promenjen." : " Promena nije uspela.");
                 if (ok) {
                     lblRez.setForeground(Color.SUCCESS_CLR);
-                    lblRez.setText("✔  Status uspešno promenjen.");
-                    // osvezi tabelu u Tab 1
+                    lblRez.setText("Status uspešno promenjen.");
                     modelEksperimenti.setRowCount(0);
                     try {
                         for (Object[] red : repo.findPlaniraniZavrseniEksperimenti(istrazivac.getIstrazivacId())) {
@@ -136,7 +134,7 @@ public class ResearcherDashboard extends JFrame {
                     }
                 } else {
                     lblRez.setForeground(Color.ERROR_CLR);
-                    lblRez.setText("⚠  Promena nije uspela.");
+                    lblRez.setText("Promena nije uspela.");
                 }
             } catch (Exception ex) {
                 lblRez.setForeground(Color.ERROR_CLR);
@@ -181,7 +179,7 @@ public class ResearcherDashboard extends JFrame {
             int row = tabela.getSelectedRow();
             if (row < 0) {
                 lblRez.setForeground(Color.ERROR_CLR);
-                lblRez.setText("⚠  Nije izabrana sesija.");
+                lblRez.setText("Nije izabrana sesija.");
                 return;
             }
             int sesijId = (int) model.getValueAt(row, 0);
@@ -193,14 +191,14 @@ public class ResearcherDashboard extends JFrame {
                 if (ok) {
                     model.removeRow(row);
                     lblRez.setForeground(Color.SUCCESS_CLR);
-                    lblRez.setText("✔  Sesija je obrisana.");
+                    lblRez.setText("Sesija je obrisana.");
                 } else {
                     lblRez.setForeground(Color.ERROR_CLR);
-                    lblRez.setText("⚠  Brisanje nije uspelo.");
+                    lblRez.setText("Brisanje nije uspelo.");
                 }
             } catch (Exception ex) {
                 lblRez.setForeground(Color.ERROR_CLR);
-                lblRez.setText("⚠  Greška: " + ex.getMessage());
+                lblRez.setText("Greška: " + ex.getMessage());
             }
         });
 

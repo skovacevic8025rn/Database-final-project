@@ -46,7 +46,7 @@ public class UserRepository {
     }
 
     public boolean save(User user) throws SQLException {
-        String sql = "INSERT INTO korisnik (ime, prezime, email, korisnicko_ime, lozinka, uloga) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO korisnik (ime, prezime, email, korisnicko_ime, lozinka) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, user.getName());
             ps.setString(2, user.getSurname());
