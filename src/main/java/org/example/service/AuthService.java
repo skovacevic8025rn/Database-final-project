@@ -3,6 +3,7 @@ package org.example.service;
 
 import org.example.model.User;
 import org.example.repository.UserRepository;
+import org.example.util.WritingInFile;
 
 import java.sql.SQLException;
 import java.util.Optional;
@@ -53,5 +54,6 @@ public class AuthService {
         if (!uspesno) {
             throw new SQLException("Registracija nije uspela. Pokušajte ponovo.");
         }
+        WritingInFile.log(user);
     }
 }
