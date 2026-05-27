@@ -155,7 +155,6 @@ public class ResearcherDashboard extends JFrame {
         p.add(lblRez);
         return p;
     }
-    // ── Tab 3: Brisanje sesije ────────────────────────────────────────────────
     private JPanel buildTabSesija() throws Exception {
         JPanel p = new JPanel(new BorderLayout());
         p.setBorder(new EmptyBorder(16, 16, 16, 16));
@@ -213,7 +212,6 @@ public class ResearcherDashboard extends JFrame {
         return p;
     }
 
-    // ── Pomoćne metode ────────────────────────────────────────────────────────
     private JTable makeTable(DefaultTableModel model) {
         JTable t = new JTable(model);
         t.setFont(new Font("Segoe UI", Font.PLAIN, 13));

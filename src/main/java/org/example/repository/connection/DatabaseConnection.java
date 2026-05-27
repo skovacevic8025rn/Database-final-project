@@ -66,7 +66,6 @@ public class DatabaseConnection {
         this.connection = DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
-    // Dodali smo synchronized kako bismo izbegli kreiranje dve konekcije
     public static synchronized DatabaseConnection getInstance() throws SQLException {
         if (instance == null || instance.connection.isClosed()) {
             instance = new DatabaseConnection();

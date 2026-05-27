@@ -53,7 +53,6 @@ public class UserRepository {
             ps.setString(3, user.getEmail());
             ps.setString(4, user.getUsername());
             ps.setString(5, user.getPassword());
-           // ps.setString(6, user.getRole());
             return ps.executeUpdate() > 0;
         }
     }
@@ -66,7 +65,6 @@ public class UserRepository {
         u.setEmail(rs.getString("email"));
         u.setUsername(rs.getString("korisnicko_ime"));
         u.setPassword(rs.getString("lozinka"));
-       // u.setRole(rs.getString("uloga"));
         return u;
     }
 }

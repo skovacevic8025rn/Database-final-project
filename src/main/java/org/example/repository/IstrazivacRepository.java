@@ -14,7 +14,6 @@ public class IstrazivacRepository {
     private Connection getConn() throws SQLException {
         return DatabaseConnection.getInstance().getConnection();
     }
-
     public Optional<Istrazivac> findByIme(String ime, String prezime) throws SQLException {
         String sql = "SELECT * FROM istrazivac WHERE ime = ? AND prezime = ? LIMIT 1";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -64,29 +63,6 @@ public class IstrazivacRepository {
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setString(1, noviStatus);
             ps.setInt(2, eksperimentId);
-            return ps.executeUpdate() > 0;
-        }
-    }
-
-    public boolean mozeBrisatiSesiju(int sesijId, int istrazivacId) throws SQLException {
-        String sql =
-                "SELECT COUNT(*) FROM sesija s " +
-                        "JOIN izvodjenje i ON s.izvodjenje_id = i.izvodjenje_id " +
-                        "JOIN eksperiment_istrazivac ei ON i.eksperiment_id = ei.eksperiment_id " +
-                        "WHERE s.sesija_id = ? AND ei.istrazivac_id = ?";
-        try (PreparedStatement ps = getConn().prepareStatement(sql)) {
-            ps.setInt(1, sesijId);
-            ps.setInt(2, istrazivacId);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) return rs.getInt(1) > 0;
-        }
-        return false;
-    }
-
-    public boolean deleteSesija(int sesijId) throws SQLException {
-        String sql = "DELETE FROM sesija WHERE sesija_id = ?";
-        try (PreparedStatement ps = getConn().prepareStatement(sql)) {
-            ps.setInt(1, sesijId);
             return ps.executeUpdate() > 0;
         }
     }
