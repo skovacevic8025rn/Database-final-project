@@ -11,7 +11,7 @@ public class SesijaRepository {
     private Connection getConn() throws SQLException {
         return DatabaseConnection.getInstance().getConnection();
     }
-
+    // Vraca sve sesije povezane sa istrazivacem.
     public List<Object[]> findSesijeByIstrazivac(int istrazivacId) throws SQLException {
         String sql =
                 "SELECT s.sesija_id, s.datum, s.vreme_pocetka, s.vreme_zavrsetka, s.tip, e.naziv AS eksperiment " +
@@ -37,7 +37,7 @@ public class SesijaRepository {
         }
         return lista;
     }
-
+    // Proverava da li istrazivac ima pravo da obrise sesiju.
     public boolean mozeBrisatiSesiju(int sesijId, int istrazivacId) throws SQLException {
         String sql =
                 "SELECT COUNT(*) FROM sesija s " +
@@ -52,7 +52,7 @@ public class SesijaRepository {
         }
         return false;
     }
-
+    // Brise sesiju ukoliko istrazivac ucestvuje na eksperimentu.
     public boolean deleteSesija(int sesijId, int istrazivacId) throws SQLException {
         if (!mozeBrisatiSesiju(sesijId, istrazivacId)) return false;
         String sql = "DELETE FROM sesija WHERE sesija_id = ?";

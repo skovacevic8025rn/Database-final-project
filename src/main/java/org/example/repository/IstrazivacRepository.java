@@ -14,6 +14,7 @@ public class IstrazivacRepository {
     private Connection getConn() throws SQLException {
         return DatabaseConnection.getInstance().getConnection();
     }
+    // Vraca istrazivaca na osnovu imena i prezimena.
     public Optional<Istrazivac> findByIme(String ime, String prezime) throws SQLException {
         String sql = "SELECT * FROM istrazivac WHERE ime = ? AND prezime = ? LIMIT 1";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
@@ -32,7 +33,7 @@ public class IstrazivacRepository {
         }
         return Optional.empty();
     }
-
+    // Prikazuje eksperimente na kojima istrazivac ucestvuje.
     public List<Object[]> findPlaniraniZavrseniEksperimenti(int istrazivacId) throws SQLException {
         String sql =
                 "SELECT e.eksperiment_id, e.naziv, e.cilj, e.datum_pocetka, e.datum_zavrsetka, " +
@@ -57,7 +58,7 @@ public class IstrazivacRepository {
         }
         return lista;
     }
-
+    // Menja status eksperimenta na osnovu prosledjenog ID-ja.
     public boolean updateStatusEksperimenta(int eksperimentId, String noviStatus) throws SQLException {
         String sql = "UPDATE eksperiment SET status = ? WHERE eksperiment_id = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {

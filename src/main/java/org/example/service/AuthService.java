@@ -23,7 +23,7 @@ public class AuthService {
         if (lozinka == null || lozinka.isBlank()) {
             throw new IllegalArgumentException("Lozinka ne sme biti prazna.");
         }
-        System.out.println("Loguje se: " + korisnickoIme + " " + lozinka);
+        System.out.println("Loguje se: " + korisnickoIme);
         return userRepository.findByKorisnickoImeILozinka(korisnickoIme, lozinka);
     }
 

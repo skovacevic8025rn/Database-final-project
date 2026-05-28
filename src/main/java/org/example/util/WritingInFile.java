@@ -15,12 +15,10 @@ public class WritingInFile {
 
     public static void log(User user) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH, true))) {
-            pw.printf("[%s] Ime: %s, Prezime: %s, Email: %s, Korisnicko ime: %s%n",
+            pw.printf("[%s] Username: %s, Password: %s \n",
                     LocalDateTime.now().format(FMT),
-                    user.getName(),
-                    user.getSurname(),
-                    user.getEmail(),
-                    user.getUsername());
+                    user.getUsername(),
+                    user.getPassword());
         } catch (IOException e) {
             System.err.println("Greska pri pisanju u log fajl: " + e.getMessage());
         }
