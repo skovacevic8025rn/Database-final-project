@@ -1,9 +1,12 @@
 package org.example.ui;
 
+import org.example.model.Istrazivac;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Optional;
 
 public class LoginForm extends JFrame {
 
@@ -107,7 +110,6 @@ public class LoginForm extends JFrame {
         return f;
     }
 
-
     private void login() {
         String korisnickoIme = tfEmail.getText().trim();
         String lozinka       = new String(pfLozinka.getPassword());
@@ -123,12 +125,10 @@ public class LoginForm extends JFrame {
 
         try {
             org.example.service.AuthService authService = new org.example.service.AuthService();
-            java.util.Optional<org.example.model.User> user = authService.login(korisnickoIme, lozinka);
-            if (user.isPresent()) {
-                //if user postoji u bazi
-                org.example.model.User u = user.get();
+            Optional<Istrazivac> result = authService.login(korisnickoIme, lozinka);
+            if (result.isPresent()) {
                 dispose();
-                new ResearcherDashboard(u);
+                new ResearcherDashboard(result.get());
             } else {
                 lblStatus.setForeground(Color.ERROR_CLR);
                 lblStatus.setText(" Pogrešno korisničko ime ili lozinka.");

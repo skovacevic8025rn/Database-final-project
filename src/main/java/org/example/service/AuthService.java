@@ -1,7 +1,9 @@
 package org.example.service;
 
 
+import org.example.model.Istrazivac;
 import org.example.model.User;
+import org.example.repository.IstrazivacRepository;
 import org.example.repository.UserRepository;
 import org.example.util.WritingInFile;
 
@@ -16,7 +18,7 @@ public class AuthService {
         this.userRepository = new UserRepository();
     }
 
-    public Optional<User> login(String korisnickoIme, String lozinka) throws SQLException {
+    public Optional<Istrazivac> login(String korisnickoIme, String lozinka) throws SQLException {
         if (korisnickoIme == null || korisnickoIme.isBlank()) {
             throw new IllegalArgumentException("Korisničko ime ne sme biti prazno.");
         }
@@ -27,33 +29,25 @@ public class AuthService {
         return userRepository.findByKorisnickoImeILozinka(korisnickoIme, lozinka);
     }
 
-    public void register(User user) throws SQLException {
-        if (user.getName() == null || user.getName().isBlank()) {
-            throw new IllegalArgumentException("Ime je obavezno.");
+    public Istrazivac register(String kontakt, String korisnickoIme, String lozinka) throws SQLException {
+        IstrazivacRepository istrazivacRepo = new IstrazivacRepository();
+        Istrazivac ist = istrazivacRepo.findByKontakt(kontakt)
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "Email '" + kontakt + "' nije pronađen u registru istraživača."));
+
+        if (userRepository.existsByKorisnickoIme(korisnickoIme)) {
+            throw new IllegalArgumentException("Korisničko ime '" + korisnickoIme + "' je već zauzeto.");
         }
-        if (user.getSurname() == null || user.getSurname().isBlank()) {
-            throw new IllegalArgumentException("Prezime je obavezno.");
-        }
-        if (user.getEmail() == null || user.getEmail().isBlank()) {
-            throw new IllegalArgumentException("Email je obavezan.");
-        }
-        if (user.getUsername() == null || user.getUsername().length() < 3) {
-            throw new IllegalArgumentException("Korisničko ime mora imati najmanje 3 karaktera.");
-        }
-        if (user.getPassword() == null || user.getPassword().length() < 8) {
-            throw new IllegalArgumentException("Lozinka mora imati najmanje 8 karaktera.");
+        if (userRepository.existsByEmail(kontakt)) {
+            throw new IllegalArgumentException("Email '" + kontakt + "' je već registrovan.");
         }
 
-        if (userRepository.existsByKorisnickoIme(user.getUsername())) {
-            throw new IllegalArgumentException("Korisničko ime '" + user.getUsername() + "' je već zauzeto.");
-        }
-        if (userRepository.existsByEmail(user.getEmail())) {
-            throw new IllegalArgumentException("Email '" + user.getEmail() + "' je već registrovan.");
-        }
-        boolean uspesno = userRepository.save(user);
+        User user = new User(ist.getName(), ist.getSurname(), kontakt, korisnickoIme, lozinka);
+        boolean uspesno = userRepository.save(user, ist.getIstrazivacId());
         if (!uspesno) {
             throw new SQLException("Registracija nije uspela. Pokušajte ponovo.");
         }
         WritingInFile.log(user);
+        return ist;
     }
 }

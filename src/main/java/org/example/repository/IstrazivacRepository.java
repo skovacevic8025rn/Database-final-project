@@ -14,6 +14,24 @@ public class IstrazivacRepository {
     private Connection getConn() throws SQLException {
         return DatabaseConnection.getInstance().getConnection();
     }
+    // Vraca istrazivaca na osnovu kontakt emaila.
+    public Optional<Istrazivac> findByKontakt(String kontakt) throws SQLException {
+        String sql = "SELECT * FROM istrazivac WHERE kontakt = ? LIMIT 1";
+        try (PreparedStatement ps = getConn().prepareStatement(sql)) {
+            ps.setString(1, kontakt);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Istrazivac i = new Istrazivac();
+                i.setIstrazivacId(rs.getInt("istrazivac_id"));
+                i.setName(rs.getString("ime"));
+                i.setSurname(rs.getString("prezime"));
+                i.setKontakt(rs.getString("kontakt"));
+                return Optional.of(i);
+            }
+        }
+        return Optional.empty();
+    }
+
     // Vraca istrazivaca na osnovu imena i prezimena.
     public Optional<Istrazivac> findByIme(String ime, String prezime) throws SQLException {
         String sql = "SELECT * FROM istrazivac WHERE ime = ? AND prezime = ? LIMIT 1";

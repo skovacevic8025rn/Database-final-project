@@ -1,13 +1,15 @@
 package org.example.ui;
 
+import org.example.model.Istrazivac;
+import org.example.service.AuthService;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
-import java.util.regex.Pattern;
 
 public class RegistrationForm extends JFrame {
 
-    private RoundedField      tfIme, tfPrezime, tfEmail, tfKorisnickoIme;
+    private RoundedField      tfKontakt, tfKorisnickoIme;
     private RoundedPass       pfLozinka, pfPotvrda;
     private JCheckBox         chkUslovi;
     private JLabel            lblStatus;
@@ -17,7 +19,7 @@ public class RegistrationForm extends JFrame {
 
     public RegistrationForm() {
         setTitle("Medicinska Istraživanja – Registracija");
-        setSize(520, 620);
+        setSize(520, 580);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -54,14 +56,15 @@ public class RegistrationForm extends JFrame {
         desc.setAlignmentX(LEFT_ALIGNMENT);
         desc.setBorder(new EmptyBorder(0, 0, 16, 0));
 
-        tfIme     = new RoundedField();
-        tfPrezime = new RoundedField();
-        JPanel row1 = hRow("Ime", tfIme, "Prezime", tfPrezime);
+        tfKontakt = new RoundedField();
+        JPanel colKontakt = vField("Kontakt email", tfKontakt);
+        colKontakt.setAlignmentX(LEFT_ALIGNMENT);
+        colKontakt.setMaximumSize(new Dimension(Integer.MAX_VALUE, 58));
 
-        tfEmail = new RoundedField();
-        JPanel colEmail = vField("Email adresa", tfEmail);
-        colEmail.setAlignmentX(LEFT_ALIGNMENT);
-        colEmail.setMaximumSize(new Dimension(Integer.MAX_VALUE, 58));
+        tfKorisnickoIme = new RoundedField();
+        JPanel colKorisnickoIme = vField("Korisničko ime", tfKorisnickoIme);
+        colKorisnickoIme.setAlignmentX(LEFT_ALIGNMENT);
+        colKorisnickoIme.setMaximumSize(new Dimension(Integer.MAX_VALUE, 58));
 
         pfLozinka = new RoundedPass();
         pfPotvrda = new RoundedPass();
@@ -109,10 +112,9 @@ public class RegistrationForm extends JFrame {
         btnLogin.addActionListener(e -> { dispose(); new LoginForm(); });
 
         body.add(desc);
-        body.add(row1);
+        body.add(colKontakt);
         body.add(Box.createVerticalStrut(10));
-        body.add(colEmail);
-        body.add(Box.createVerticalStrut(10));
+        body.add(colKorisnickoIme);
         body.add(Box.createVerticalStrut(10));
         body.add(row4);
         body.add(Box.createVerticalStrut(8));
@@ -184,41 +186,43 @@ public class RegistrationForm extends JFrame {
     }
 
     private void validiraj() {
-        lblStatus.setForeground(Color.ERROR_CLR);
-        if (tfIme.getText().trim().isEmpty())                                                { lblStatus.setText("⚠  Ime je obavezno."); return; }
-        if (tfPrezime.getText().trim().isEmpty())                                            { lblStatus.setText("⚠  Prezime je obavezno."); return; }
-        if (!java.util.regex.Pattern.matches("^[\\w.+-]+@[\\w-]+\\.[a-z]{2,}$", tfEmail.getText().trim())) { lblStatus.setText("⚠  Unesite ispravnu email adresu."); return; }
-        String pass = new String(pfLozinka.getPassword());
-        if (pass.length() < 8)                                                               { lblStatus.setText("⚠  Lozinka mora imati najmanje 8 karaktera."); return; }
-        if (!pass.equals(new String(pfPotvrda.getPassword())))                               { lblStatus.setText("⚠  Lozinke se ne poklapaju."); return; }
-        if (!chkUslovi.isSelected())                                                         { lblStatus.setText("⚠  Prihvatite uslove korišćenja."); return; }
+        String kontakt       = tfKontakt.getText().trim();
+        String korisnickoIme = tfKorisnickoIme.getText().trim();
+        String lozinka       = new String(pfLozinka.getPassword());
+        String potvrda       = new String(pfPotvrda.getPassword());
+
+        if (kontakt.isEmpty())          { show("Kontakt email je obavezan."); return; }
+        if (korisnickoIme.length() < 3) { show("Korisničko ime mora imati najmanje 3 karaktera."); return; }
+        if (lozinka.length() < 8)       { show("Lozinka mora imati najmanje 8 karaktera."); return; }
+        if (!lozinka.equals(potvrda))   { show("Lozinke se ne poklapaju."); return; }
+        if (!chkUslovi.isSelected())    { show("Prihvatite uslove korišćenja."); return; }
 
         try {
-            org.example.model.User user = new org.example.model.User(
-                    tfIme.getText().trim(),
-                    tfPrezime.getText().trim(),
-                    tfEmail.getText().trim(),
-                    tfEmail.getText().trim(),
-                    pass);
-            org.example.service.AuthService authService = new org.example.service.AuthService();
-            authService.register(user);
+            AuthService auth = new AuthService();
+            Istrazivac ist = auth.register(kontakt, korisnickoIme, lozinka);
             lblStatus.setForeground(Color.SUCCESS_CLR);
-            lblStatus.setText("✔  Registracija uspešna! Dobrodošli, " + user.getUsername() + ".");
+            lblStatus.setText("✔  Dobrodošli, " + ist.getName() + " " + ist.getSurname() + "!");
             btnRegistracija.setEnabled(false);
         } catch (IllegalArgumentException ex) {
-            lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("⚠  " + ex.getMessage());
+            show(ex.getMessage());
         } catch (Exception ex) {
-            lblStatus.setForeground(Color.ERROR_CLR);
-            lblStatus.setText("Greška: " + ex.getMessage());
+            show("Greška: " + ex.getMessage());
         }
     }
 
+    private void show(String msg) {
+        lblStatus.setForeground(Color.ERROR_CLR);
+        lblStatus.setText("⚠  " + msg);
+    }
+
     private void ocisti() {
-        tfIme.setText(""); tfPrezime.setText(""); tfEmail.setText("");
-        pfLozinka.setText(""); pfPotvrda.setText("");
+        tfKontakt.setText("");
+        tfKorisnickoIme.setText("");
+        pfLozinka.setText("");
+        pfPotvrda.setText("");
         chkUslovi.setSelected(false);
-        lblStatus.setText(" "); pbStrength.setValue(0);
+        lblStatus.setText(" ");
+        pbStrength.setValue(0);
         lblStrengthText.setText("Unesite lozinku");
         pbStrength.setForeground(Color.ERROR_CLR);
         btnRegistracija.setEnabled(true);
