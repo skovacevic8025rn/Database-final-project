@@ -9,7 +9,6 @@ public class RegistrationForm extends JFrame {
 
     private RoundedField      tfIme, tfPrezime, tfEmail, tfKorisnickoIme;
     private RoundedPass       pfLozinka, pfPotvrda;
-    private JComboBox<String> cbUloga;
     private JCheckBox         chkUslovi;
     private JLabel            lblStatus;
     private JButton           btnRegistracija;
