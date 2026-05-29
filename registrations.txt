@@ -4,3 +4,5 @@
 [2026-05-28 10:47:47] Username: ana@gmail.com, Password: ana123123 
 [2026-05-28 10:48:13] Username: stefan@gmail.com, Password: stefan123 
 [2026-05-28 15:25:08] Username: ana@gmail.com, Password: ana123123 
+[2026-05-29 02:13:10] Username: minnakovaceviccc@gmail.com, Password: mina12345. 
+[2026-05-29 02:27:44] Username: sako@gmail.com, Password: sara12345. 
