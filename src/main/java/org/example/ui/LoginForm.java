@@ -51,7 +51,7 @@ public class LoginForm extends JFrame {
         desc.setAlignmentX(LEFT_ALIGNMENT);
         desc.setBorder(new EmptyBorder(0, 0, 18, 0));
 
-        JLabel lblEmail = makeLabel("Korisnički email");
+        JLabel lblEmail = makeLabel("Korisničko ime");
         tfEmail = new RoundedField();
         tfEmail.setAlignmentX(LEFT_ALIGNMENT);
         tfEmail.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
