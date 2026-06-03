@@ -47,6 +47,7 @@ public class ResearcherDashboard extends JFrame {
         tabs.addTab("Eksperimenti",   buildTabEksperimenti());
         tabs.addTab("Promeni status", buildTabStatus());
         tabs.addTab("Obriši sesiju",  buildTabSesija());
+        tabs.addTab("Rezultati eksperimenata", new RezultatiForm());
         add(tabs, BorderLayout.CENTER);
 
         setVisible(true);

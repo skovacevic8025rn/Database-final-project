@@ -1,9 +1,14 @@
 package org.example.repository;
 
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 import org.example.repository.connection.DatabaseConnection;
+import org.example.repository.connection.MongoConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SesijaRepository {
@@ -11,7 +16,7 @@ public class SesijaRepository {
     private Connection getConn() throws SQLException {
         return DatabaseConnection.getInstance().getConnection();
     }
-    // Vraca sve sesije povezane sa istrazivacem.
+
     public List<Object[]> findSesijeByIstrazivac(int istrazivacId) throws SQLException {
         String sql =
                 "SELECT s.sesija_id, s.datum, s.vreme_pocetka, s.vreme_zavrsetka, s.tip, e.naziv AS eksperiment " +
@@ -37,7 +42,7 @@ public class SesijaRepository {
         }
         return lista;
     }
-    // Proverava da li istrazivac ima pravo da obrise sesiju.
+
     public boolean mozeBrisatiSesiju(int sesijId, int istrazivacId) throws SQLException {
         String sql =
                 "SELECT COUNT(*) FROM sesija s " +
@@ -52,13 +57,22 @@ public class SesijaRepository {
         }
         return false;
     }
-    // Brise sesiju ukoliko istrazivac ucestvuje na eksperimentu.
+
     public boolean deleteSesija(int sesijId, int istrazivacId) throws SQLException {
         if (!mozeBrisatiSesiju(sesijId, istrazivacId)) return false;
         String sql = "DELETE FROM sesija WHERE sesija_id = ?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setInt(1, sesijId);
-            return ps.executeUpdate() > 0;
+            boolean obrisan = ps.executeUpdate() > 0;
+            if (obrisan) {
+                MongoDatabase db = MongoConnection.getInstance().getDatabase();
+                MongoCollection<Document> log = db.getCollection("sesija_log");
+                log.insertOne(new Document("sesija_id", sesijId)
+                        .append("istrazivac_id", istrazivacId)
+                        .append("akcija", "brisanje")
+                        .append("vreme", new Date()));
+            }
+            return obrisan;
         }
     }
 }
